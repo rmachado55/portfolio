@@ -1,0 +1,19 @@
+@import 'style/_variables.scss';
+
+.componenteCorNegativa{
+    background-color: $cor-escura;
+    padding: $padding-vertical $padding-horizontal;
+    color: $cor-secundaria;
+    & h1{
+        font-family: $font-grossa;
+        color: $cor-primaria;
+        text-shadow: 1px 0 2px rgba(255, 255, 255, 0.3);
+    }
+    & h2{
+        font-family: $font-grossa;
+        color: white;        
+    }
+    & h3, h4, h5, p{
+        font-family: $font-simples;
+    }
+}

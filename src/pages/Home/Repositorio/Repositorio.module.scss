@@ -1,0 +1,17 @@
+@import 'style/_variables.scss';
+
+.Repositorio{
+    height: 100vh;
+    display: flex;
+    &__superior{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+    &__box{
+        background-image: linear-gradient(to bottom, rgba(255,255,255, 0.2), rgba(255, 255, 255, 0.3));
+        margin : $padding-horizontal $padding-vertical ;
+        padding: $padding-horizontal $padding-vertical ;
+        width: 40%
+    }
+}

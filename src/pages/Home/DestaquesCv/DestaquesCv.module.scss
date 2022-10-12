@@ -1,0 +1,41 @@
+@import 'style/_variables.scss';
+
+.destaquesCv{
+    display: flex;
+    height: 110vh;
+    &__bg{
+        position: absolute;
+        width:90%;
+        filter: opacity(30%);
+    }
+
+    &__esquerda{
+        display: grid;
+        text-align: center;
+        padding: $padding-horizontal $padding-vertical;        
+    & img{
+        margin: auto;
+        width: 30%;
+    }
+    }
+    &__direita{
+        display: grid;
+        padding: $padding-horizontal $padding-vertical;        
+    }
+}
+
+// #maquinaDeEscrever{
+//     animation :
+//         typing 3.5s steps(20, end),
+//         blink0caret 0.8 step-end infinite;
+// }
+
+// @keyframes typing {
+//     from {width: 0}
+//     to { width: 100%}
+// }
+
+// @keyframes blink-caret {
+//     from, to { border-color: transparent}
+//     50% {border-color: $cor-primaria}
+// }

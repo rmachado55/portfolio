@@ -1,0 +1,17 @@
+@import 'style/_variables.scss';
+
+.componenteCorPositiva{
+    background-color: $cor-secundaria;
+    padding: $padding-vertical $padding-horizontal;
+    color: $cor-escura;
+    & h1{
+        font-family: $font-simples;
+        color: $cor-primaria;
+    }
+    & h2{
+        font-family: $font-simples;        
+    }
+    & h3, h4, h5, p{
+        font-family: $font-grossa;
+    }
+}
