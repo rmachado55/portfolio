@@ -1,0 +1,44 @@
+@import 'style/_variables.scss';
+
+.NavigationBar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: $primary-color;
+    padding:  calc(0.2*$padding-vertical) $padding-horizontal;
+    z-index: 90;
+    &__titulo{
+        font-family: $narrow-font;
+        
+        & h3{
+            font-family: $thick-font;
+        }
+    }
+    &__hamburguer{
+        position: absolute;
+        right: 8%;
+        top: 0;
+    }
+    &__opcoes{
+        background-color: $primary-color;
+        position: absolute;
+        line-height: 600%;
+        display: none;
+        width: 50%;
+        top: 64px;
+        left: 50%;
+        font-family: $thick-font;
+        padding: $padding-horizontal $padding-vertical;
+     
+    & img {
+        position: absolute;
+        width: 40vw;
+        top: 0;
+    }
+    & h1 {
+        z-index: 20;
+    
+}
+
+    
+}}

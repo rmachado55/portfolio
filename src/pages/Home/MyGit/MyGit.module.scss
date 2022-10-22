@@ -1,0 +1,14 @@
+@import 'style/_variables.scss';
+
+.meuGit{
+    height: 100vh;
+    display: flex;
+    &__superior{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+    &__board{
+        display: flex;
+    }   
+}

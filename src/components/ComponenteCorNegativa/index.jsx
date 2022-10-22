@@ -1,11 +1,7 @@
 import style from './ComponenteCorNegativa.module.scss'
 
-type Props = {
-    title: string,
-    children: JSX.Element,
-  };
 
-export default function ComponenteCorNegativa ({ title, children }: Props) {
+export default function ComponenteCorNegativa ({ title, children }) {
 
     return(
         <div className={style.componenteCorNegativa}>

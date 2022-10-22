@@ -1,16 +1,16 @@
-$cor-primaria: #FF0655; // Cor do Menu e destaques;
-$cor-secundaria: #E2FF00; // Cor do BG e alguns destaques;
-$cor-terciaria: #D9D9D9; // Cor Contraste para BG e escrita no fundo escuro;
-$cor-escura: #1a1a1a; // Cor escura para escrita e BG;
+$primary-color: #FF0655; // Cor do Menu e destaques;
+$secondary-color: #E2FF00; // Cor do BG e alguns destaques;
+$contrast-color: #D9D9D9; // Cor Contraste para BG e escrita no fundo escuro;
+$dark-color: #1a1a1a; // Cor escura para escrita e BG;
 
 $padding-horizontal: 40px;
 $padding-vertical: 40px;
 
-$font-simples: 'Comfortaa', cursive; // Destaque nos componentes Positivos e corpo nos Negativos;
-$font-grossa: 'Bebas Neue', cursive; // Destaque nos componentes Negativos e corpo nos Positivos;
+$narrow-font: 'Comfortaa', cursive; // Destaque nos componentes Positivos e corpo nos Negativos;
+$thick-font: 'Bebas Neue', cursive; // Destaque nos componentes Negativos e corpo nos Positivos;
 
 h1{
-    font-size: 46px;
+    font-size: 56px;
     font-weight: 700;
     padding: 8px 0;  
 }
@@ -33,7 +33,7 @@ h4{
     padding: 2px 0;
 }
 
-p{
+p, span{
     font-size:14px;
     font-weight: 300;
 }
@@ -42,17 +42,19 @@ button {
     
     border-radius: 20px;
     border-width: 0;
-    font-family: $font-simples;
+    font-family: $narrow-font;
     width: fit-content;
     height: fit-content;
     padding: 8px 24px;
     margin: 10px 0;
-    &.ativo{
-        color:$cor-escura;
-        background-color: $cor-primaria;
+    &.active{
+        color:$dark-color;
+        background-color: $primary-color;
+        cursor: pointer;
     }
-    &.inativo{
+    &.inactive{
         color: rgb(17, 13, 13);
         background-color:rgb(190, 167, 167);
+        cursor:not-allowed;
     }
 }

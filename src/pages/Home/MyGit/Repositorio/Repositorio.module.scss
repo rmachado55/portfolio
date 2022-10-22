@@ -1,0 +1,11 @@
+@import 'style/_variables.scss';
+
+.repositorio{
+    background-image: linear-gradient(to bottom, rgba(255,255,255, 0.3), rgba(255, 255, 255, 0.2));
+    display: grid;
+    text-align: center;
+    margin : $padding-vertical calc(0.5*$padding-horizontal);
+    padding: calc(0.5*$padding-vertical) $padding-horizontal;
+    width: 190px;
+    border-radius: 40px;
+}

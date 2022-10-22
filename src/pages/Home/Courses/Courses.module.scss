@@ -1,0 +1,11 @@
+@import 'style/_variables.scss';
+
+.certificados{
+    display: grid;
+    text-align: center;
+&__icons{
+    color : $contrast-color;
+    padding: 20px;
+    font-size: 30px;
+}
+}

@@ -1,11 +1,7 @@
 import style from './ComponenteCorPositiva.module.scss'
 
-type Props = {
-    title: string,
-    children: JSX.Element,
-  };
 
-export default function ComponenteCorPositiva ({ title, children }: Props) {
+export default function ComponenteCorPositiva ({ title, children }) {
 
     return(
         <div className={style.componenteCorPositiva}>

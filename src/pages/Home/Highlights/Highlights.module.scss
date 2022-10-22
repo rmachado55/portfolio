@@ -1,12 +1,15 @@
 @import 'style/_variables.scss';
 
 .destaquesCv{
+    margin-top: 10vh;
     display: flex;
-    height: 110vh;
+    height: 70vh;
     &__bg{
         position: absolute;
-        width:90%;
-        filter: opacity(30%);
+        height: 80vh;
+        top:10vh;
+        object-fit: cover;
+        filter: opacity(40%) blur(1px);
     }
 
     &__esquerda{
@@ -37,5 +40,5 @@
 
 // @keyframes blink-caret {
 //     from, to { border-color: transparent}
-//     50% {border-color: $cor-primaria}
+//     50% {border-color: $primary-color}
 // }
