@@ -24,12 +24,7 @@ export default function NavigationBar (props) {
      return(
         <NavBar>
            <NavTitle />
-            <div>
-                {props.language}
-                <button onClick={() => {props.setLanguage(0)}}>EN</button>
-                <button onClick={() => {props.setLanguage(1)}}>PT</button>
-                <button onClick={() => {props.setLanguage(2)}}>SP</button>
-            </div>
+          
             <div onClick={() => setMenu(!menu)}>
                 {menu ? <IoClose size={64}/> : <IoMenu size={64}/>}
             </div>

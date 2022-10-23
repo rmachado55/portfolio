@@ -6,19 +6,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function AppRouter() {
       
-  const [language, setLanguage] = useState(0)
+  const [language, setLanguage] = useState('en')
   
   return (
       <main className='container'>
         <Router>
           <Routes>
-            <Route path="/" element={<LanguageSelection language={language} setLanguage={setLanguage}/>}/>
+            <Route path="/" index element={<LanguageSelection language={language} setLanguage={setLanguage}/>}/>
           </Routes>
           
           <NavigationBar/>
           
           <Routes>
-            <Route path={`${language}/home`} element={<Home />}/>
+            <Route path={language} element={<Home />}/>
           </Routes>
     
           

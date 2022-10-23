@@ -1,17 +1,14 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-
-
+import { Link, useParams } from "react-router-dom"
 
 export default function LanguageSelection ({children, setLanguage}){
 
-
+    let { language } = useParams();
 
     return(
         <>
-            <Link to={'/en/home'} ><button onClick={() => {setLanguage('/en')}}>English</button></Link>
-            <Link to={'/pt/home'} ><button onClick={() => {setLanguage('/pt')}}>Português</button></Link>
-            <Link to={'/es/home'} ><button onClick={() => {setLanguage('/es')}}>Español</button></Link>
+            <Link to="en" ><button onClick={() => {setLanguage('en')}}>English</button></Link>
+            <Link to="pt" ><button onClick={() => {setLanguage('pt')}}>Português</button></Link>
+            <Link to="es" ><button onClick={() => {setLanguage('es')}}>Español</button></Link>
         </>
     )
 }

@@ -6,8 +6,8 @@ export const DarkColor = '#1a1a1a';
 export const PaddingHorizontal = '40px';
 export const PaddingVertical = '40px';
     
-export const NarrowFont = `'Comfortaa', cursive`;
-export const ThickFont = `'Bebas Neue', cursive`;
+export const NarrowFont = "'Comfortaa', cursive";
+export const ThickFont = "'Bebas Neue', cursive";
 
 
 // button {
