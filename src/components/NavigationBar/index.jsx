@@ -1,31 +1,39 @@
-import style from './NavigationBar.module.scss';
 import {IoMenu , IoClose} from 'react-icons/io5';
 import { useState } from 'react';
 import Grafite from 'assets/img/tinta.png';
 import {Link} from 'react-router-dom'
+import styled from 'styled-components'
+import { PaddingHorizontal, PaddingVertical, PrimaryColor } from 'style/_variables'
+import NavTitle from './NavTitle';
 
 
 export default function NavigationBar (props) {
-
-
     const [menu, setMenu] = useState(false)
 
+    const NavBar = styled.nav `
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: ${PrimaryColor};
+    padding:  calc(0.2*${PaddingHorizontal}) ${PaddingVertical};
+    z-index: 90;
+    `
+
+
+
      return(
-        <nav className={style.NavigationBar}>
-            <div className={style.NavigationBar__titulo}>
-                <h3>Ricardo Machado</h3>
-                <h5>Portfólio</h5>
-            </div>
+        <NavBar>
+           <NavTitle />
             <div>
                 {props.language}
                 <button onClick={() => {props.setLanguage(0)}}>EN</button>
                 <button onClick={() => {props.setLanguage(1)}}>PT</button>
                 <button onClick={() => {props.setLanguage(2)}}>SP</button>
             </div>
-            <div  className={style.NavigationBar__hamburguer} onClick={() => setMenu(!menu)}>
+            <div onClick={() => setMenu(!menu)}>
                 {menu ? <IoClose size={64}/> : <IoMenu size={64}/>}
             </div>
-            <div className={style.NavigationBar__opcoes} style={{ display:( menu ? "grid" : "none" ) }}>
+            <div style={{ display:( menu ? "grid" : "none" ) }}>
                 <img src={Grafite} alt={'mancha de tinta cinza'} />
                 <h1><Link to={'/'}>HOME</Link></h1>
                 <h1><Link to={'carreira'}>CARREIRA</Link></h1>
@@ -33,6 +41,6 @@ export default function NavigationBar (props) {
                 <h1><Link to={'certificados'}>CERTIFICADOS OBTIDOS</Link></h1>
                 <h1><Link to={'contato'}>CONTATO / DÊ SEU FEEDBACK</Link></h1>
             </div>
-            </nav>
+            </NavBar>
     )
 }

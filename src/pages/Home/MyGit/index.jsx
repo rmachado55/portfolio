@@ -1,5 +1,5 @@
-import ComponenteCorPositiva from 'components/ComponenteCorPositiva'
-import style from './MyGit.module.scss'
+import Container from 'components/Container'
+
 import Repositorio from './Repositorio'
 import { SiJavascript, SiTypescript, SiNodedotjs } from 'react-icons/si'
 import { Badges } from 'db/badges'
@@ -18,19 +18,19 @@ const RepositoriosVitrine = [{
 }]
 
     return(
-        <ComponenteCorPositiva title={'Repositório'}>
+        <Container dark={true} title={'Repositório'}>
         <>
-            <div className={style.meuGit__superior}>
+            <div >
                 <h1 id={'aparece'}>Quer ver Mais?</h1>
                 <h2>Meu respositório |</h2> 
             </div>
-            <div className={style.meuGit__board}>
+            <div >
                 {RepositoriosVitrine.map((repositorio) => {return(
                 <Repositorio url={'to-do-list-express'} />
                 )})}
             </div>
         
         </>
-        </ComponenteCorPositiva>
+        </Container>
     )
 }

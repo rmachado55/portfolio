@@ -1,5 +1,4 @@
 import DestaquesCv from './Highlights'
-import Projects from './Projects'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -8,7 +7,7 @@ import Certificados from './Courses';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home ({language, setLanguage}) {
+export default function Home () {
     
     useEffect(() =>{
        
@@ -49,10 +48,9 @@ export default function Home ({language, setLanguage}) {
     }, [])
 
     return(<>
-            <DestaquesCv language={language} setLanguage={setLanguage} />
-            <Projects />
-            <Repositorio />
-            <Certificados />     
+            <DestaquesCv />
+             <Repositorio />
+            <Certificados />   
           </>)
 
 }

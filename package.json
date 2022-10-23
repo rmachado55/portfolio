@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0",
   "private": false,
-  "homepage": "https://rmachado.github.io/",
+  "homepage": "https://rmachado55.github.io/portfolio/",
   "dependencies": {
     "@icons-pack/react-simple-icons": "^5.9.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -15,11 +15,13 @@
     "axios": "^1.1.2",
     "gsap": "^3.11.3",
     "react": "^18.2.0",
+    "react-css-modules": "^4.7.11",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "sass": "^1.55.0",
+    "styled-components": "^5.3.6",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },

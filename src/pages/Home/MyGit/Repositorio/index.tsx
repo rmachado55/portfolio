@@ -1,9 +1,5 @@
 import axios from 'axios'
 import { Children, useEffect, useState } from 'react'
-import style from './Repositorio.module.scss'
-
-
-
 
 export default function Repositorio(url : string) {
 
@@ -17,10 +13,10 @@ useEffect(() => {
     console.log(dadosRepositorio)
 
     return(
-        <div className={style.repositorio}>
+        <div >
             <h4>{dadosRepositorio.name}</h4>
             <p>{dadosRepositorio.description}</p>
-            <a href={dadosRepositorio.html_url}><button className={style.active}><h4>Visite</h4></button></a>                      
+            <a href={dadosRepositorio.html_url}><button><h4>Visite</h4></button></a>                      
         </div>
     )
 }

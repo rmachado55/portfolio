@@ -1,7 +1,8 @@
 import NavigationBar from "components/NavigationBar";
 import Home from "pages/Home";
+import LanguageSelection from "pages/LanguageSelection";
 import { useState } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function AppRouter() {
       
@@ -10,11 +11,17 @@ export default function AppRouter() {
   return (
       <main className='container'>
         <Router>
-          <NavigationBar language={language} setLanguage={setLanguage} />
           <Routes>
-            <Route path='/' index element={<Home language={language} setLanguage={setLanguage} />}/>' 
-    
+            <Route path="/" element={<LanguageSelection language={language} setLanguage={setLanguage}/>}/>
           </Routes>
+          
+          <NavigationBar/>
+          
+          <Routes>
+            <Route path={`${language}/home`} element={<Home />}/>
+          </Routes>
+    
+          
         </Router>
       </main>
     );
