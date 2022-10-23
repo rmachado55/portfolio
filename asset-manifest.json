@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0ce2c65.css",
-    "main.js": "/static/js/main.9dd1940d.js",
-    "static/media/setas.png": "/static/media/setas.564bd660c6b756fc079b.png",
-    "static/media/ricardo_desenho.png": "/static/media/ricardo_desenho.3185862a6357499d4abd.png",
-    "static/media/tinta.png": "/static/media/tinta.4bc493c8fe10b7fbb2b6.png",
-    "index.html": "/index.html",
-    "main.a0ce2c65.css.map": "/static/css/main.a0ce2c65.css.map",
-    "main.9dd1940d.js.map": "/static/js/main.9dd1940d.js.map"
+    "main.css": "/portfolio/static/css/main.0079a2ff.css",
+    "main.js": "/portfolio/static/js/main.7ad0364f.js",
+    "static/media/ricardo_desenho.png": "/portfolio/static/media/ricardo_desenho.3185862a6357499d4abd.png",
+    "static/media/tinta.png": "/portfolio/static/media/tinta.4bc493c8fe10b7fbb2b6.png",
+    "index.html": "/portfolio/index.html",
+    "main.0079a2ff.css.map": "/portfolio/static/css/main.0079a2ff.css.map",
+    "main.7ad0364f.js.map": "/portfolio/static/js/main.7ad0364f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0ce2c65.css",
-    "static/js/main.9dd1940d.js"
+    "static/css/main.0079a2ff.css",
+    "static/js/main.7ad0364f.js"
   ]
 }
