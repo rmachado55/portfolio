@@ -18,10 +18,12 @@ export default function NavigationBar (props) {
     padding:  calc(0.2*${PaddingHorizontal}) ${PaddingVertical};
     z-index: 90;
     `
+    const Filling = styled.div`
+    height: 80px;
+    `
 
 
-
-     return(
+     return(<>
         <NavBar>
            <NavTitle />
           
@@ -37,5 +39,7 @@ export default function NavigationBar (props) {
                 <h1><Link to={'contato'}>CONTATO / DÊ SEU FEEDBACK</Link></h1>
             </div>
             </NavBar>
-    )
+            <Filling/>
+            </>
+            )
 }

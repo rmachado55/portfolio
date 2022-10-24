@@ -2,7 +2,7 @@ import Container from 'components/Container'
 
 import Repositorio from './Repositorio'
 import { SiJavascript, SiTypescript, SiNodedotjs } from 'react-icons/si'
-import { Badges } from 'db/badges'
+import { Badges } from 'components/Bagdes/badgesBACK'
 
 export default function MyGit() {
 
@@ -18,7 +18,7 @@ const RepositoriosVitrine = [{
 }]
 
     return(
-        <Container dark={true} title={'Repositório'}>
+        <Container dark={false} >
         <>
             <div >
                 <h1 id={'aparece'}>Quer ver Mais?</h1>

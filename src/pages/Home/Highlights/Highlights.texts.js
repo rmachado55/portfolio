@@ -22,7 +22,7 @@ export const Texts =
         "/es" : "Freelancer desarollando aplicaciones web reales, en busca de una oportunidad;"
     },
     button01 : {
-        "/en" : "More about me...;",
+        "/en" : "More about me...",
         "/pt" : "Mais sobre mim..." ,
         "/es" : "Más sobre mí..."
     },
