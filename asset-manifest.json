@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0079a2ff.css",
-    "main.js": "/portfolio/static/js/main.27c13031.js",
-    "static/media/ricardo_desenho.png": "/portfolio/static/media/ricardo_desenho.3185862a6357499d4abd.png",
-    "static/media/tinta.png": "/portfolio/static/media/tinta.4bc493c8fe10b7fbb2b6.png",
-    "index.html": "/portfolio/index.html",
-    "main.0079a2ff.css.map": "/portfolio/static/css/main.0079a2ff.css.map",
-    "main.27c13031.js.map": "/portfolio/static/js/main.27c13031.js.map"
+    "main.css": "/www.ricardomachado.great-site.net/static/css/main.0079a2ff.css",
+    "main.js": "/www.ricardomachado.great-site.net/static/js/main.89066d49.js",
+    "static/media/ricardo_desenho.png": "/www.ricardomachado.great-site.net/static/media/ricardo_desenho.3185862a6357499d4abd.png",
+    "static/media/tinta.png": "/www.ricardomachado.great-site.net/static/media/tinta.4bc493c8fe10b7fbb2b6.png",
+    "index.html": "/www.ricardomachado.great-site.net/index.html",
+    "main.0079a2ff.css.map": "/www.ricardomachado.great-site.net/static/css/main.0079a2ff.css.map",
+    "main.89066d49.js.map": "/www.ricardomachado.great-site.net/static/js/main.89066d49.js.map"
   },
   "entrypoints": [
     "static/css/main.0079a2ff.css",
-    "static/js/main.27c13031.js"
+    "static/js/main.89066d49.js"
   ]
 }
