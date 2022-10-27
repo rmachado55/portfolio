@@ -2,8 +2,8 @@ export const Texts =
 
 {
     title : {
-        "/en" : "Developed projects",
-        "/pt" : "Projetos desenvolvidos" ,
-        "/es" : "Proyectos desarollados"
+        "/portfolio/en" : "Developed projects",
+        "/portfolio/pt" : "Projetos desenvolvidos" ,
+        "/portfolio/es" : "Proyectos desarollados"
     }
 }

@@ -7,9 +7,10 @@ export default function Button ({active, children}){
 
     const Button = styled.button`
     border-radius: 12px;
-    padding: 0 8px;
+    padding: 4px 8px;
     margin: 12px 0;
     width: fit-content;
+    height: 44px;
     background-color: ${Active ? PrimaryColor : ContrastColor};
     color: ${DarkColor};
     font-family: ${ThickFont}

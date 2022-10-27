@@ -2,15 +2,21 @@ import Container from "components/Container";
 import { Texts } from './Projects.texts.js'
 import { useLocation } from "react-router-dom";
 import Project from "./Project/index.jsx";
-import { ProjectLIst } from "./Project/ProjectList.js";
+import styled from 'styled-components'
+import { Vertical } from "style/_variables.js";
 
 export default function Projects () {
+
+    const Title = styled.h1`
+    text-align: center;
+    padding-top: ${Vertical};
+    ` 
 
     const location = useLocation();
 
     return(
-        <Container dark={true}>
-        <h1>{Texts.title[`${location.pathname}`]}</h1>
+        <Container id={'projects'} dark={true}>
+        <Title >{Texts.title[`${location.pathname}`]}</Title>
         <Project />
         </Container>
     )

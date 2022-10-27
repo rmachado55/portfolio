@@ -1,0 +1,76 @@
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiReactrouter, SiStyledcomponents, SiBootstrap, SiSass, SiTypescript, SiFigma, SiGit, SiGithub, SiNodedotjs, SiExpress, SiMongodb, SiPostman, SiLinux, SiJava } from 'react-icons/si';
+import {AiOutlineApi} from 'react-icons/ai';
+import {GiHook} from 'react-icons/gi';
+import {BiBrain, BiCookie} from 'react-icons/bi';
+import {DiScrum} from 'react-icons/di';
+import {GrDatabase, GrVirtualStorage, GrStorage} from 'react-icons/gr';
+import {MdManageSearch, MdArchitecture} from 'react-icons/md';
+
+
+export const BadgesList = {
+description : {
+    java : "JAVA",
+    html : "HTML5",
+    HTML : "HTML5",
+    css : "CSS3 Styling",
+    arch: "Architecture",
+    logic : "Logic",
+    scrum : "SCRUM / Agile",
+    javascript : "JavaScript Language",
+    JavaScript : "JavaScript Language",
+    cookiestorage : "Cookies Storage",
+    sessionstorage : "Session Storage",
+    localstorage : "Local Storage",
+    database : "Data Manipulation",
+    api : "API Conection",
+    react : "React Framework",
+    router : "React Router",
+    hooks : "React Hooks",
+    styled : "Styled Components",
+    boot : "BootStrap Styling",
+    sass : "Sass Pre-Processor",
+    typescript : "TypeScript Language", 
+    TypeScript : "TypeScript Language", 
+    figma : "Figma",
+    GIT : "Git",
+    github : "GitHub",
+    nodejs : "Node.Js",
+    express : "Express Middleware",
+    MONGO : "Mongo DB",
+    POST : "Postman",
+    LINUX : "Linux",
+    crud : "C.R.U.D."
+    },
+ icons : {
+        java : <SiJava/>,
+        html : <SiHtml5/>,
+        HTML : <SiHtml5/>,
+        css : <SiCss3/>,
+        arch : <MdArchitecture/>,
+        logic : <BiBrain/>,
+        scrum : <DiScrum/>,
+        javascript : <SiJavascript/>,
+        JavaScript : <SiJavascript/>,
+        cookiestorage : <BiCookie />,
+        sessionstorage : <GrStorage />,
+        localstorage: <GrVirtualStorage />,
+        database: <MdManageSearch/>,
+        api : <AiOutlineApi/>,
+        react : <SiReact/>,
+        router : <SiReactrouter/>,
+        hooks : <GiHook/>,
+        styled: <SiStyledcomponents/>,
+        boot : <SiBootstrap/>,
+        sass : <SiSass/>,
+        typescript : <SiTypescript/>,
+        TypeScript : <SiTypescript/>,
+        figma: <SiFigma/>,
+        GIT : <SiGit/>,
+        github : <SiGithub/>,
+        nodejs : <SiNodedotjs/>,
+        express : <SiExpress/>,
+        MONGO : <SiMongodb/>,
+        POST : <SiPostman/>,
+        LINUX : <SiLinux/>,
+        crud : <GrDatabase/>,
+        }}
