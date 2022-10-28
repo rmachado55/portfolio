@@ -1,8 +1,10 @@
 import Container from "components/Container";
 import { Texts } from './Contact.texts'
 import { useLocation } from "react-router-dom";
-import {SiGithub, SiLinkedin, SiWhatsapp} from 'react-icons/si'
+import {SiGithub, SiLinkedin, SiWhatsapp, SiHouse} from 'react-icons/si'
+import {BsFillHouseDoorFill} from 'react-icons/bs'
 import styled from 'styled-components'
+import {FiMail} from 'react-icons/fi'
 
 export default function Contact () {
 
@@ -13,15 +15,18 @@ export default function Contact () {
     `
 
     const Title = styled.div`
-    display: block;
-    width: 50vw;
-    text-align: center;
- 
+    display: grid;
+    margin: auto;
+    text-align: center; 
     `
 
     const Links = styled.div`
-    display: block
-    
+    display: grid;
+    width: 50vw;
+
+    h3{
+        line-height: 300%;
+    }
     `
 
     return(
@@ -31,10 +36,11 @@ export default function Contact () {
                     <h1>{Texts.title[`${location.pathname}`]}</h1>
                 </Title>
                 <Links>
-                <h3>ricardo.machado7@hotmail.com</h3>
-                <a href="https://api.whatsapp.com/send?phone=5519981732744" ><h3><SiWhatsapp/>+55 19 98173-2744</h3></a>
-                <a href="https://www.linkedin.com/in/ricardomachado7/"><h3><SiLinkedin/>/ricardomachado7/</h3></a>
-                <a href="https://www.github.com/rmachado55/"><h3><SiGithub/>/rmachado55</h3></a>
+                <h3><FiMail/>ricardo.machado7@hotmail.com</h3>
+                <a href="https://api.whatsapp.com/send?phone=5519981732744" ><h3><SiWhatsapp/> +55 19 98173-2744</h3></a>
+                <a href="https://www.linkedin.com/in/ricardomachado7/"><h3><SiLinkedin/> /ricardomachado7/</h3></a>
+                <a href="https://www.github.com/rmachado55/"><h3><SiGithub/> /rmachado55</h3></a>
+                <h3><BsFillHouseDoorFill/> Campinas - SP</h3>
                 </Links>
             </Wrapper>
         </Container>

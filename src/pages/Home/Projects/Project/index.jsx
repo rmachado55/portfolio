@@ -4,6 +4,7 @@ import Button from "components/Button";
 import { ProjectList } from './ProjectList.js'
 import { BadgesList } from "components/Bagdes/badgesList.js";
 import { Horizontal, Vertical } from "style/_variables.js";
+import {SiGithub} from 'react-icons/si';
 
 export default function Project () {
 
@@ -11,14 +12,12 @@ export default function Project () {
 
     const Project = styled.div`
     display: flex;
-    width: 80vw;
+  
     padding: 10vh 0;
     `
 
     const Picture = styled.img`
-    width: 320px;
-    height: 220px;
-    margin:auto;
+    width: 340px;    
     padding: 0 ${Horizontal};
     object-fit: cover;
     border-radius: 20px;
@@ -26,6 +25,7 @@ export default function Project () {
 
     const Description =styled.div`
     display: grid;
+    width: 60vw;
 
     p{
 
@@ -39,9 +39,13 @@ export default function Project () {
 
     `
 
+    const Left = styled.div`
+    display:block;
+    text-align: center;
+    `
+
     const Badges = styled.div`
     display: flex;
-    justify-content: space-between;
     font-size: 30px;
     padding: ${Vertical} 0;
     text-align: center;
@@ -61,11 +65,23 @@ export default function Project () {
     return(<>
         {ProjectList.map(ProjectList => 
         <Project key={ProjectList.key} >
+            <Left>
             <Picture src={`https://rmachado55.github.io/portfolio/assets/img/projects/${ProjectList.key}.png`} alt={ProjectList.link}></Picture>
+            <a target="_blank" href={`${ProjectList.repo}`}>
+                <Button active={ProjectList.active}>
+                    <h3>{ProjectList.action[`${location.pathname}`]} <SiGithub/></h3>
+                </Button>
+            </a>
+            </Left>
             <Description>
+                
+                <div>
                 <h2>{ProjectList.name[`${location.pathname}`]}</h2>
                 
-                <a href={'link'} ><p>{ProjectList.link}</p></a>
+                <a href={`${ProjectList.link}`} ><p>{ProjectList.link}</p></a>
+                </div>
+                
+               
                 {ProjectList.features[`${location.pathname}`].map(feature => 
                 
                 <li>{feature}</li>)}
@@ -81,7 +97,7 @@ export default function Project () {
                     )}
 
                 </Badges>
-            <Button active={ProjectList.active}><h3>{ProjectList.action[`${location.pathname}`]}</h3></Button>
+            
         </Description>
         
         </Project>

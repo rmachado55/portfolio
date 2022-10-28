@@ -9,11 +9,11 @@ export default function Button ({active, children}){
     border-radius: 12px;
     padding: 4px 8px;
     margin: 12px 0;
-    width: fit-content;
-    height: 44px;
+    width: fit-content;    
     background-color: ${Active ? PrimaryColor : ContrastColor};
     color: ${DarkColor};
-    font-family: ${ThickFont}
+    font-family: ${ThickFont};
+    cursor: pointer;
     `
 
     return(
