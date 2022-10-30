@@ -12,17 +12,30 @@ export default function NavTitle () {
     const Title = styled.div`
     font-family: ${NarrowFont};
     justify-content: left;
-    display:flex;
-    vertical-align: middle;
+    display:flex;         
 
     h1{
         font-size:larger;        
     }
     h2{
-        padding: 6px 16px 6px 0;
+        padding: 8px 24px 6px 0;
         font-size: x-large;
         font-family: ${ThickFont};
-    }`
+    }
+    
+    @media screen and (max-width: 690px)
+        {
+            display:block;
+            padding: 4px 16px;
+            line-height: 12%;     
+        h1{
+            font-size: x-small;
+        
+        }
+        
+    }
+
+    `
 
     const Language =styled.div`
     position: absolute;
@@ -30,24 +43,28 @@ export default function NavTitle () {
     display: flex;
     border: 2px solid black;
     border-radius: 8px;
-    right: 140px;
+    right: 100px;
     top: 6px;
-    p {
-        font-family: ${NarrowFont};
-        font-size: medium;
-    }
-    
+    font-family: ${NarrowFont};
+    font-size: medium;
     `
 
-    return(<>
+    const Display = styled.div`
+    @media screen and (max-width: 690px)
+    {
+            display: none;
+    }
+    `
+
+return(<>
         <Title>
             <h2>{Texts.portfolio[`${location.pathname}`]}</h2>
-            <h1>| Ricardo Machado</h1>            
+            <h1>Ricardo Machado</h1>            
         </Title>
         <Link to={'/portfolio'}>
         <Language>
             <GrLanguage size={16}/>
-            <p>{Texts.language[`${location.pathname}`]}</p>
+            <Display>{Texts.language[`${location.pathname}`]}</Display>
         </Language>
         </Link>
             

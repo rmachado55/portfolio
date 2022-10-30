@@ -5,35 +5,59 @@ import {Texts} from './Highlights.texts';
 import { useLocation } from 'react-router-dom';
 import Button from "components/Button";
 import styled from 'styled-components'
+import { Vertical } from "style/_variables";
 
 export default function Highlights(){
 
     const location = useLocation();   
     
-
     const Wrapper = styled.div`
-    display: flex;
-    height: 70vh;
+    display: flex;    
+    padding: 14vh 0 14vh 0;
+    
+
+    @media screen and (max-width: 690px)
+        {        
+        display:grid;        
+        }
     `
 
     const Bg = styled.img`
-    position:absolute;
+    position: absolute;    
+    top: 10vh;
+    height: 62vh;    
+    filter: opacity(30%);    
     
-    height:70vh;
-    left:20vw;
-    filter: opacity(40%);
+    @media screen and (max-width: 690px)
+        {        
+        height:80vw;        
+        }
     `
+    
 
     const Name = styled.div`
-    width: 50%;
+    width: 40vw;
     display: grid;
-    padding-top:15vh;
-    text-align: center;    
+    text-align: center;
+    height: 40vh;
+    
+    @media screen and (max-width: 690px)
+        {
+        width: 90vw;              
+        }    
     `
     const ShowCase = styled.div`
-    width: 50%;
-    padding-top:15vh;
-    display: grid;
+    display: block;
+    
+    h3{
+        padding: 20px 0;      
+    }
+
+    @media screen and (max-width: 690px) {
+        margin: ${Vertical} 0;
+        text-align: center;
+        width:90vw;
+    }                
     `
 
 return(<Container dark={false} id={"home"}>
@@ -49,7 +73,7 @@ return(<Container dark={false} id={"home"}>
           <h3 >{Texts.high03[`${location.pathname}`]}</h3>
           <h3 >{Texts.high04[`${location.pathname}`]}</h3>       
 
-        <Button active={true}><h3>{Texts.button01[`${location.pathname}`]}</h3></Button>
+        <Button active={true}><h4>{Texts.button01[`${location.pathname}`]}</h4></Button>
         </ShowCase>
         
         </Wrapper>

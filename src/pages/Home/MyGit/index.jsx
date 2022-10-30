@@ -20,18 +20,25 @@ export default function MyGit() {
     overflow: auto;
     white-space: nowrap:
     padding: ${Vertical} 0;
+    width:90vw;
         
     `
 
     const Box = styled.div`
     display: grid;
-    width: 240px;
+    width: 300px;
     text-align: center;
     padding: 16px 16px;
     margin: ${Vertical} 16px;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 30px;      
+    border-radius: 30px;
+    
+    @media screen and (max-width: 690px)
+        {        
+        width:140px;        
+        }
     `
+    
 
 const location = useLocation();
 

@@ -1,58 +1,102 @@
 import { Link } from "react-router-dom"
-import { ContrastColor, Horizontal, NarrowFont, PrimaryColor, ThickFont, Vertical } from "style/_variables"
+import { Break, ContrastColor, Horizontal, NarrowFont, PrimaryColor, SecondaryColor, ThickFont, Vertical } from "style/_variables"
 import styled from 'styled-components'
+
 
 
 export default function LanguageSelection ({setLanguage}){
 
     const Full = styled.div`
     background-color: ${PrimaryColor};
-    height: 52vh;
+    height: 80vh;
     text-align: center;
-    display: grid;
-    padding: 24vh ${Horizontal};
+    display: block;
+    padding: 10vh ${Horizontal};
 
-    h1{
-        font-family: ${ThickFont};
+    
+    @media screen and (max-width: 690px)
+        {
+        height: 94vh;
+        padding: 3vh 0;
+        }    
+
+    `
+
+    const Greeting = styled.div`
+    display: flex;    
+    justify-content: space-around;
+    font-family: ${ThickFont};
+    
+    @media screen and (max-width: 690px)
+        {
+        display: grid;
+        }    
+
+    ` 
+    
+    const CallToAction = styled.div`
+    display: flex;
+    font-family: ${NarrowFont};
+    justify-content: space-around;
+    font-style: italic;
+
+    p{
+        padding: 10px 0;
     }
-    h4{
-        font-family: ${NarrowFont};
-    }
+   
+
+    @media screen and (max-width: 690px)
+        {
+        margin: 4vh ${Horizontal};
+        display: grid;
+        }  
+    
     `
 
     const Options = styled.div`
-        display: flex;
-        margin: auto;
+    display: flex;    
+    justify-content: space-around;
+
+    @media screen and (max-width: 690px)
+        {
+        display: grid;
+        }    
+
     `
 
     const Option = styled.div`
         font-family: ${NarrowFont};
-        border: 2px solid ${ContrastColor};
-        width: 200px;
-        border-radius: 10px;
-        padding: ${Vertical} ${Horizontal};
-        margin: 20px;        
+        width: 160px;
+        border-radius: 20px;
+        padding: calc(0.5*${Vertical}) ${Horizontal};
+        margin-top: 10px;
+        background-color: ${SecondaryColor};
+        
     `
 
 
     return(
-        <Full>
-            <h1>Welcome! Bem-Vindo ! Beinvenido !</h1>
-            <h4>Choose a language to begin : | Escolha um idioma para começar: | Elije un idioma para empezar</h4>
+        <Full>            
+            <Greeting>
+            <h1>Welcome!</h1><h1>Bem-Vindo!</h1><h1>¡Beinvenido!</h1>
+            </Greeting>
+            <CallToAction>
+            <p>Choose a language to begin:</p><p>Escolha um idioma para começar:</p><p>Elije un idioma para empezar</p>
+            </CallToAction>
             <Options>    
                 <Link to="/portfolio/en" >
                     <Option onClick={() => {setLanguage('/portfolio/en')}}>
-                        <h2>English</h2>
+                        <h3>English</h3>
                         </Option>
                         </Link>
                 <Link to="/portfolio/pt" >
                     <Option onClick={() => {setLanguage('/portfolio/pt')}}>
-                        <h2>Português</h2>
+                        <h3>Português</h3>
                         </Option>
                         </Link>
                 <Link to="/portfolio/es" >
                     <Option onClick={() => {setLanguage('/portfolio/es')}}>
-                        <h2>Español</h2>
+                        <h3>Español</h3>
                         </Option>
                         </Link>
             </Options>

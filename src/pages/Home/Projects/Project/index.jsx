@@ -10,61 +10,101 @@ export default function Project () {
 
     const location = useLocation();
 
-    const Project = styled.div`
-    display: flex;
-  
-    padding: 10vh 0;
+    const Box = styled.div`
+    display:grid;
+    padding: 100px;
     `
 
+    const Title = styled.div`
+    width:100vw;
+    display:block;
+    `
+    
+
     const Picture = styled.img`
-    width: 340px;    
-    padding: 0 ${Horizontal};
+    width: 30vw;
     object-fit: cover;
     border-radius: 20px;
+
+    @media screen and (max-width: 690px)
+    {
+        width: 90vw;
+    }
+    `
+    const Project = styled.div`
+    display: flex;  
+    padding: 6vh 0;
+
+    @media screen and (max-width: 690px)
+    {
+        display: block;
+    }
     `
 
     const Description =styled.div`
-    display: grid;
-    width: 60vw;
+    display: block;    
 
     p{
-
         padding-bottom: 24px;
     }
 
     li{
-        line-height: 200%;
-        font-size: larger;
+        margin: 1vh 0;        
     }
 
     `
 
     const Left = styled.div`
-    display:block;
+    display: grid;
     text-align: center;
+    padding: 20px 4vw;
+
+    @media screen and (max-width: 690px)
+    {
+        padding: 0 0;
+    }
     `
 
     const Badges = styled.div`
     display: flex;
-    font-size: 30px;
-    padding: ${Vertical} 0;
-    text-align: center;
-    span{
-        font-size:9px;
-                    
-    }
+    flex-wrap: wrap;    
+    margin: ${Vertical} 0;
+    text-align: center;   
     `
 
     const Icons = styled.div`
-    width: 50px;
-    padding: 0 10px;
-    line-height: 60%;
-    line-height: 10%       
+    width: 52px;
+    padding: 0 16px;
+
+    font-size: 40px;
+
+    p{
+        font-size: 10px;
+        line-height: 120%;
+    }
+    
+    @media screen and (max-width: 690px){    
+    {
+    width: 42px;
+    padding: 0 8px;
+    {
+        font-size: 20px;
+
+        p{
+            font-size:8px;
+        }
+    }}
     `
 
     return(<>
         {ProjectList.map(ProjectList => 
-        <Project key={ProjectList.key} >
+        <Box>
+            <Title>
+                <h2>{ProjectList.name[`${location.pathname}`]}</h2>
+                
+                <a href={`${ProjectList.link}`} ><p>{ProjectList.link}</p></a>
+            </Title>
+            <Project key={ProjectList.key} >
             <Left>
             <Picture src={`https://rmachado55.github.io/portfolio/assets/img/projects/${ProjectList.key}.png`} alt={ProjectList.link}></Picture>
             <a target="_blank" href={`${ProjectList.repo}`}>
@@ -75,23 +115,19 @@ export default function Project () {
             </Left>
             <Description>
                 
-                <div>
-                <h2>{ProjectList.name[`${location.pathname}`]}</h2>
                 
-                <a href={`${ProjectList.link}`} ><p>{ProjectList.link}</p></a>
-                </div>
                 
                
                 {ProjectList.features[`${location.pathname}`].map(feature => 
                 
-                <li>{feature}</li>)}
+                <h3><li>{feature}</li></h3>)}
                 
                 <Badges>
                 
                     {ProjectList.topics.map(topics => {return(
                         <Icons>
                         {BadgesList.icons[topics]}<br></br>
-                        <span>{BadgesList.description[topics]}</span>
+                        <p>{BadgesList.description[topics]}</p>
                         </Icons>
                         )}            
                     )}
@@ -101,6 +137,7 @@ export default function Project () {
         </Description>
         
         </Project>
+        </Box>
     )}
 </>   
     )

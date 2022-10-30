@@ -11,8 +11,8 @@ export default function Table ({list}) {
     const Table = styled.table`
         margin: auto;
         text-align: center;
-        width: 90vw;
-       
+        width: 80%;
+        
         th{
             color: ${DarkColor};
             background-color: ${ContrastColor};

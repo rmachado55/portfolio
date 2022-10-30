@@ -7,6 +7,7 @@ export default function Container ({children, dark, id}) {
 
     const Container = styled.section`
 
+        width: 100vw;
         background-color: ${Theme ? DarkColor : SecondaryColor};
         padding:  ${Vertical} ${Horizontal};
         color: ${Theme ? ContrastColor : DarkColor};

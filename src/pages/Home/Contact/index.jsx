@@ -12,21 +12,36 @@ export default function Contact () {
 
     const Wrapper = styled.div`
     display: flex;
+
+    @media screen and (max-width: 690px)
+        {        
+        display:block;
+        text-align: center;       
+        }
     `
 
-    const Title = styled.div`
-    display: grid;
-    margin: auto;
-    text-align: center; 
+    const Title = styled.div`    
+    width:40vw;
+    text-align: center;
+    
+    @media screen and (max-width: 690px)
+        {        
+        width:90vw;
+        }
     `
+    
 
     const Links = styled.div`
-    display: grid;
+    display: block;
     width: 50vw;
+    line-height: 340%;
 
-    h3{
-        line-height: 300%;
     }
+    @media screen and (max-width: 690px)
+        {        
+        width:90vw;
+        line-height: 200%;     
+        }
     `
 
     return(

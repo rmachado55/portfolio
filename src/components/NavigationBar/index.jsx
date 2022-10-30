@@ -23,10 +23,18 @@ export default function NavigationBar () {
         z-index: 95;
         padding: 4px 0 4px ${Horizontal};
         border-radius: 0 0 30px 30px;
+        height:36px;
+
+        @media screen and (max-width: 690px)
+        {
+            margin: 0 0;
+            width:94vw;
+            
+        }  
     `
     const Hamburguer =styled.div`
         position: absolute;
-        right: 18px;
+        right: 24px;
         top: 0;
         z-index: 100;
 
@@ -38,7 +46,7 @@ export default function NavigationBar () {
         padding-right:32px;
         background-color: ${PrimaryColor};   
         display: ${ menu ? "grid" : "none"};        
-        height: 60vh;
+        height: 480px;
         right: 8%;
         width: 300px;
         z-index: 90;        
@@ -48,10 +56,17 @@ export default function NavigationBar () {
         font-family: ${ThickFont};
         font-size: xx-large;
         z-index: 100;
-        
+       
     }
-    
-        `
+
+    @media screen and (max-width: 690px)
+        {
+            padding: 0;
+            width: 100vw;
+            
+        }  
+    `
+
     const Bg = styled.img`
         position: absolute;
         width: 100%;

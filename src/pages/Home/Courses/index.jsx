@@ -59,11 +59,11 @@ export default function Courses() {
         border-radius: 15px;
         
         display: flex;
-        gap: 18px;
+        gap: 8px;
         height: 42px;
         justify-content: space-between;
         padding: 0 15px;
-        width: 360px;
+        width: 180px;
         margin-top: 13px;
     
     
@@ -74,7 +74,7 @@ export default function Courses() {
         font-size: large;
         opacity: 90%;
         outline: none;
-        width: 300px;
+        width: 200px;
         &::placeholder {
         color: #4c4d5e;
         
