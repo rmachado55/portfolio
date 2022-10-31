@@ -86,7 +86,7 @@ export default function Project () {
     @media screen and (max-width: 690px){    
     {
     width: 45px;
-    padding: 0 4px;
+    padding: 0 6px;
     {
         font-size: 18px;
 

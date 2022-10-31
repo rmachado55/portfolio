@@ -79,7 +79,7 @@ export default function NavigationBar () {
                 <NavTitle/>
 
                 <Hamburguer onClick={() => setMenu(!menu)}>
-                    {menu ? <><p>Fechar</p><IoClose size={32}/></> : <><p>Menu</p><IoMenu size={32}/></>}
+                    {menu ? <><p>{Texts.close[`${location.pathname}`]}</p><IoClose size={32}/></> : <><p>Menu</p><IoMenu size={32}/></>}
                 </Hamburguer>
                 </NavBar>
                 <Menu>

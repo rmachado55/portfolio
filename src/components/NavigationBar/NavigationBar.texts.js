@@ -37,6 +37,12 @@ export const Texts =
         "/portfolio/es" : "Repositório",
         "/" : "Repositório"
     },
+    close : {
+        "/portfolio/en" : "Close",
+        "/portfolio/pt" : "Fechar" ,
+        "/portfolio/es" : "Cerrar",
+        "/" : "Select Language"
+    },
     altBG :{
         "/portfolio/en" : "Gray paint smear mixed with magenta background",
         "/portfolio/pt" : "Mancha de tinta cinza misturada ao fundo magenta" ,

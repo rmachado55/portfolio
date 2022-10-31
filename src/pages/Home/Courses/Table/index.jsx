@@ -1,12 +1,12 @@
 import { useLocation } from "react-router-dom";
 import {BadgesList} from 'components/Bagdes/badgesList'
 import styled from 'styled-components';
-import {Texts} from "../Courses.texts"
+import {Texts} from "./Table.texts"
 import { ContrastColor, DarkColor, } from "style/_variables";
 import {AiOutlineFileSearch} from 'react-icons/ai';
 
 
-export default function Table ({list}) {
+export default function Table ({list, activePage}) {
 
     const Table = styled.table`
         margin: auto;
@@ -37,7 +37,7 @@ export default function Table ({list}) {
                     <th><p>{Texts.date[`${location.pathname}`]}</p></th>
                     <th><p></p></th>
                 </tr>
-            {list.map(certificate =>
+            {list.slice(((activePage-1)*10),(activePage*10)).map(certificate =>
             <tr>
                 <td><h4>{BadgesList.icons[certificate.area[0]]} {BadgesList.icons[certificate.area[1]]} {BadgesList.icons[certificate.area[2]]}</h4></td>
                 <td><p>{certificate[`${location.pathname}`]}</p></td>

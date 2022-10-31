@@ -12,5 +12,7 @@ export const Texts =
         "/portfolio/pt" : "Selecione o Idioma" ,
         "/portfolio/es" : "Seleccione el Idioma",
         "/" : "Select Language"
-    }
+    },
+    
+
 }
