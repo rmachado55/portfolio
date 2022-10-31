@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Table from "./Table";
 import { useEffect, useState } from "react";
 import { CertificatesList } from "./Table/CertificatesList";
-import ShowCertificate from "./ShowCertificate";
+import ShowCertificate from "../../ShowCertificate";
 import PageSelector from "./PageSelector";
 import Filters from "./Filters";
 import Heading from "./Heading";
@@ -15,6 +15,7 @@ export default function Courses() {
     const [list, setList] = useState(CertificatesList);
     const [activePage, setActivePage] = useState(1);
     const [showCertificate, setShowCertificate] = useState(false);
+    const [certificateActive, setCertificateActive] = useState('001');
 
     const location = useLocation()
 
@@ -41,7 +42,7 @@ export default function Courses() {
             setList(sortList(newTable));
             setActivePage(1);
     },[search, sortOrder])
-    
+        
     return(
         <Container dark={true} id={"certificates"}>
 
@@ -52,11 +53,9 @@ export default function Courses() {
                 sortOrder={sortOrder}
                 setSortOrder={setSortOrder}
                 setSearch={setSearch}
-            />
-          
-            <ShowCertificate showCertificate={showCertificate} setShowCertificate={setShowCertificate} />
-
-            <Table list={list} activePage={activePage} />
+            />                
+            
+            <Table list={list} activePage={activePage} showCertificate={showCertificate} setShowCertificate={setShowCertificate}/>
 
             <PageSelector list={list} activePage={activePage} setActivePage={setActivePage}/>
 

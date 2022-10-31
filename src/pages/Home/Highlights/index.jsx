@@ -13,24 +13,27 @@ export default function Highlights(){
     
     const Wrapper = styled.div`
     display: flex;    
-    padding: 14vh 0 14vh 0;
-    
+    padding: 14vh 0 14vh 0;    
 
     @media screen and (max-width: 690px)
         {        
-        display:grid;        
+        display:block;
+        padding: ${Vertical} 0 ${Vertical} 0;         
         }
     `
 
     const Bg = styled.img`
     position: absolute;    
-    top: 10vh;
-    height: 62vh;    
-    filter: opacity(30%);    
+    top: 3vh;
+    height: 74vh;    
+    filter: opacity(20%);
+    object-fit: cover;   
     
     @media screen and (max-width: 690px)
         {        
-        height:80vw;        
+            height: 68vh;
+            width:100vw;
+            top: 0;     
         }
     `
     
@@ -43,7 +46,8 @@ export default function Highlights(){
     
     @media screen and (max-width: 690px)
         {
-        width: 90vw;              
+        width: 100%;
+        height:17vh;             
         }    
     `
     const ShowCase = styled.div`
@@ -56,25 +60,26 @@ export default function Highlights(){
     @media screen and (max-width: 690px) {
         margin: ${Vertical} 0;
         text-align: center;
-        width:90vw;
+        width: 100%;
+        height: 21vh;          
     }                
     `
 
 return(<Container dark={false} id={"home"}>
         <Wrapper>
         <Bg src={Ricardo} alt={'efeito de fundo'}/>
-        <Name>
-            <h1>Ricardo Machado</h1>
-            <h2>| Front-End</h2>
-        </Name>
-        <ShowCase>
-          <h3 >{Texts.high01[`${location.pathname}`]}</h3>
-          <h3 >{Texts.high02[`${location.pathname}`]}</h3>
-          <h3 >{Texts.high03[`${location.pathname}`]}</h3>
-          <h3 >{Texts.high04[`${location.pathname}`]}</h3>       
+            <Name>
+                <h1>Ricardo Machado</h1>
+                <h2>| Front-End</h2>
+            </Name>
+            <ShowCase>
+            <h3 >{Texts.high01[`${location.pathname}`]}</h3>
+            <h3 >{Texts.high02[`${location.pathname}`]}</h3>
+            <h3 >{Texts.high03[`${location.pathname}`]}</h3>
+            <h3 >{Texts.high04[`${location.pathname}`]}</h3>       
 
-        <Button active={true}><h4>{Texts.button01[`${location.pathname}`]}</h4></Button>
-        </ShowCase>
+            <Button active={true}><h4>{Texts.button01[`${location.pathname}`]}</h4></Button>
+            </ShowCase>
         
         </Wrapper>
     </Container>)
