@@ -32,9 +32,9 @@ export const Texts =
         "/portfolio/es" : "Instituición de Enseñanza",
     },
     date: {
-        "/portfolio/en" : "Month/Year",
-        "/portfolio/pt" : "Mês/Ano" ,
-        "/portfolio/es" : "Mês/Año",
+        "/portfolio/en" : "Month / Year",
+        "/portfolio/pt" : "Mês / Ano" ,
+        "/portfolio/es" : "Mês / Año",
     },
     keywords:{
         "/portfolio/en" : "Search by KEY WORDS",

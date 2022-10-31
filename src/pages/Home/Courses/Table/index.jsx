@@ -11,7 +11,7 @@ export default function Table ({list}) {
     const Table = styled.table`
         margin: auto;
         text-align: center;
-        width: 80%;
+        width: 90vw;
         
         th{
             color: ${DarkColor};
@@ -39,9 +39,9 @@ export default function Table ({list}) {
                 </tr>
             {list.map(certificate =>
             <tr>
-                <td><h3>{BadgesList.icons[certificate.area[0]]} {BadgesList.icons[certificate.area[1]]} {BadgesList.icons[certificate.area[2]]}</h3></td>
+                <td><h4>{BadgesList.icons[certificate.area[0]]} {BadgesList.icons[certificate.area[1]]} {BadgesList.icons[certificate.area[2]]}</h4></td>
                 <td><p>{certificate[`${location.pathname}`]}</p></td>
-                <td>{certificate.hours}</td>
+                <td><p>{certificate.hours}</p></td>
                 <td><p>{certificate.school}</p></td>
                 <td><p>{certificate.Month}/2022</p></td>
                 <td><a target="blank" href={`https://rmachado55.github.io/assets/img/certificates/${certificate.id}.png`}><h3><AiOutlineFileSearch/></h3></a></td>

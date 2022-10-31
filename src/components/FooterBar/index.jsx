@@ -6,7 +6,6 @@ import styled from 'styled-components'
 export default function FooterBar () {
 
     const Footer = styled.footer`
-    width:100vw;
     background-color: ${PrimaryColor};
     font-family: ${NarrowFont};
     padding: ${Vertical} ${Horizontal};

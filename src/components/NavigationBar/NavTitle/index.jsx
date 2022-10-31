@@ -23,34 +23,31 @@ export default function NavTitle () {
         font-family: ${ThickFont};
     }
     
-    @media screen and (max-width: 690px)
+    @media screen and (max-width: 780px)
         {
             display:block;
-            padding: 4px 16px;
-            line-height: 12%;     
+            padding: 4px;
+            line-height: 10%;     
         h1{
             font-size: x-small;
         
-        }
-        
+        }        
     }
-
     `
 
     const Language =styled.div`
-    position: absolute;
     padding: 6px;
     display: flex;
     border: 2px solid black;
     border-radius: 8px;
-    right: 100px;
+    right: 90px;
     top: 6px;
     font-family: ${NarrowFont};
     font-size: medium;
     `
 
     const Display = styled.div`
-    @media screen and (max-width: 690px)
+    @media screen and (max-width: 780px)
     {
             display: none;
     }

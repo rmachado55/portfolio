@@ -5,7 +5,7 @@ export const CertificatesList =
     "/portfolio/pt": "Lógica de Programação Essencial",
     "/portfolio/en": "Essential Programing Logic",
     "/portfolio/es": "Lógica de programación Esencial",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "001",
     "Month": "2"
 },
@@ -15,7 +15,7 @@ export const CertificatesList =
     "/portfolio/pt": "Aprenda o que são Estrutura de Dados e Algoritmos",
     "/portfolio/en": "Learning  data Structures and Algoritms",
     "/portfolio/es": "Aprenda qué son la estructura de datos y los algoritmos",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "002",
     "Month": "2"
 },
@@ -25,7 +25,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao GIT e GITHUB",
     "/portfolio/en": "GIT and Git-Hub Introduction",
     "/portfolio/es": "Introducción a GIT y GITHUB",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "003",
     "Month": "2"
 },
@@ -35,7 +35,7 @@ export const CertificatesList =
     "/portfolio/pt": "Criando seu primeiro repositório no GITHUB",
     "/portfolio/en": "Creating your first GITHUB repository",
     "/portfolio/es": "Creando tu primer repositorio en GITHUB",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "004",
     "Month": "2"
 },
@@ -45,7 +45,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao Ecosistema e Documentação JAVA",
     "/portfolio/en": "Introducting JAVA's Ecosystem and Documentation",
     "/portfolio/es": "Introducción al Ecosistema JAVA y Documentación",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "005",
     "Month": "2"
 },
@@ -123,7 +123,7 @@ export const CertificatesList =
     "area": ["html", "css", "javascript"],
     "hours": "16",
     "/portfolio/pt": "JavaScript e HTML - Desenvolva um jogo e pratique lógica de programação",
-    "/portfolio/en": "JavaScript and HTML - Develop a game and practice programing logic - Create dynamic pages",
+    "/portfolio/en": "JavaScript and HTML - Develop a game and practice programing logic",
     "/portfolio/es": "JavaScript y HTML - Desarrolle un juego y practique lógica de programación",
     "school": "Alura",
     "id" : "044",
@@ -156,7 +156,7 @@ export const CertificatesList =
     "/portfolio/pt": "Pensamento Computacional",
     "/portfolio/en": "Computational Thinking",
     "/portfolio/es": "Pensamiento Computacional",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "006",
     "Month": "4"
 },
@@ -166,7 +166,7 @@ export const CertificatesList =
     "/portfolio/pt": "Primeiros Passos de Desenvolvimento Web",
     "/portfolio/en": "First steps in Web Development",
     "/portfolio/es": "Desarrollo Web Primeros Pasos",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "007",
     "Month": "4"
 },
@@ -176,7 +176,7 @@ export const CertificatesList =
     "/portfolio/pt": "Projetos Ágeis com SCRUM",
     "/portfolio/en": "Agile projects with SCRUM",
     "/portfolio/es": "Proyectos Ágiles con SCRUM",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "008",
     "Month": "4"
 },
@@ -186,7 +186,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução a criação de Sites com HTML5 e CSS3",
     "/portfolio/en": "Introduction for Web Site Creation with HTML5 and CSS3",
     "/portfolio/es": "Introducción a la creación de sitios web con HTML5 y CSS3",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "009",
     "Month": "4"
 },
@@ -196,7 +196,7 @@ export const CertificatesList =
     "/portfolio/pt": "Criando páginas de internet com BOOTSTRAP",
     "/portfolio/en": "Creating Webpages with BOOTSTRAP",
     "/portfolio/es": "Creación de páginas web con BOOTSTRAP",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "010",
     "Month": "4"
 },
@@ -206,7 +206,7 @@ export const CertificatesList =
     "/portfolio/pt": "Recriando a interface do NETFLIX",
     "/portfolio/en": "Recreating the NETFLIX interface",
     "/portfolio/es": "Recreando la interfaz de NETFLIX",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "011",
     "Month": "4"
 },
@@ -216,7 +216,7 @@ export const CertificatesList =
     "/portfolio/pt": "Dominando IDEs JAVA",
     "/portfolio/en": "Dominating JAVA's IDE",
     "/portfolio/es": "Dominar los IDE de JAVA",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "012",
     "Month": "5"
 },
@@ -226,7 +226,7 @@ export const CertificatesList =
     "/portfolio/pt": "Variáveis tipos de dados e Operadores matemáticos em JAVA",
     "/portfolio/en": "Variables, data types and Math operators in JAVA",
     "/portfolio/es": "Tipos de datos de variables y operadores matemáticos en JAVA",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "013",
     "Month": "5"
 },
@@ -236,7 +236,7 @@ export const CertificatesList =
     "/portfolio/pt": "Entendendo métodos JAVA",
     "/portfolio/en": "Understanding JAVA methods",
     "/portfolio/es": "Comprender los métodos JAVA",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "014",
     "Month": "5"
 },
@@ -286,7 +286,7 @@ export const CertificatesList =
     "/portfolio/pt": "Lógica Condicional e controles de Fluxo JAVA",
     "/portfolio/en": "Conditional logic and Flux control in JAVA",
     "/portfolio/es": "Controles de flujo de lógica condicional y JAVA",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "015",
     "Month": "6"
 },
@@ -296,7 +296,7 @@ export const CertificatesList =
     "/portfolio/pt": "Estruturas de repetição e Arrays em JAVA",
     "/portfolio/en": "Arrays and repetition structures in JAVA",
     "/portfolio/es": "Repetir estructuras y arreglos en JAVA",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "016",
     "Month": "6"
 },
@@ -306,7 +306,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução a programação e pensamento computacional",
     "/portfolio/en": "Introduction to programing and Computational Thinking",
     "/portfolio/es": "Introducción a la programación y el pensamiento computacional",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "017",
     "Month": "6"
 },
@@ -316,7 +316,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao VS Code",
     "/portfolio/en": "Introduction to VS Code",
     "/portfolio/es": "Introducción a VS Code",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "018",
     "Month": "6"
 },
@@ -326,7 +326,7 @@ export const CertificatesList =
     "/portfolio/pt": "Desenvolvendo um Menu Hamburguer e Morphing menu",
     "/portfolio/en": "Developiong a Hamburguer Morphing menu",
     "/portfolio/es": "Desarrollo de un menú de hamburguesa y un menú morphing",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "019",
     "Month": "6"
 },
@@ -336,7 +336,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao JavaScript",
     "/portfolio/en": "JavaScript introduction",
     "/portfolio/es": "Introducción a JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "020",
     "Month": "6"
 },
@@ -346,7 +346,7 @@ export const CertificatesList =
     "/portfolio/pt": "Sintaxe Básica em JavaScript",
     "/portfolio/en": "Basic sintax in JavaScript",
     "/portfolio/es": "Sintaxis básica en JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "021",
     "Month": "6"
 },
@@ -356,7 +356,7 @@ export const CertificatesList =
     "/portfolio/pt": "Sintaxe e operadores JavaScript",
     "/portfolio/en": "Sintax and operators in JavaScript",
     "/portfolio/es": "Operadores y sintaxis de JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "022",
     "Month": "6"
 },
@@ -366,7 +366,7 @@ export const CertificatesList =
     "/portfolio/pt": "Variáveis e Tipos com JavaScript",
     "/portfolio/en": "Variables and Types with JavaScipt",
     "/portfolio/es": "Variables y Tipos con JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "023",
     "Month": "6"
 },
@@ -376,7 +376,7 @@ export const CertificatesList =
     "/portfolio/pt": "Dominando funções em JavaScript",
     "/portfolio/en": "Dominating Functions in JavaScript",
     "/portfolio/es": "Dominar funciones en JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "024",
     "Month": "6"
 },
@@ -386,7 +386,7 @@ export const CertificatesList =
     "/portfolio/pt": "Debugging Error Handling em JavaScript",
     "/portfolio/en": "Debbug and Error Handling in JavaScript",
     "/portfolio/es": "Manejo de errores de depuración en JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "025",
     "Month": "6"
 },
@@ -396,7 +396,7 @@ export const CertificatesList =
     "/portfolio/pt": "JavaScript Assíncrono",
     "/portfolio/en": "Asynchronous JavaScript",
     "/portfolio/es": "JavaScript asíncrono",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "026",
     "Month": "6"
 },
@@ -406,7 +406,7 @@ export const CertificatesList =
     "/portfolio/pt": "Orientação a Objetos com JavaScript",
     "/portfolio/en": "Object Oriented JavaScript",
     "/portfolio/es": "Orientado a Objetos con JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "027",
     "Month": "6"
 },
@@ -416,7 +416,7 @@ export const CertificatesList =
     "/portfolio/pt": "Manipulando DOM com JavaScript",
     "/portfolio/en": "Manipulating DOM with JavaScript",
     "/portfolio/es": "Manipulando DOM con JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "028",
     "Month": "6"
 },
@@ -426,7 +426,7 @@ export const CertificatesList =
     "/portfolio/pt": "Desenvolvendo um Jogo da Memória com JavaScript",
     "/portfolio/en": "Developing a match-game with JavaScript",
     "/portfolio/es": "Desarrollo de un juego de memoria con JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "029",
     "Month": "6"
 },
@@ -436,7 +436,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao React",
     "/portfolio/en": "Introduction to React",
     "/portfolio/es": "Introducción a React",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "030",
     "Month": "6"
 },
@@ -446,7 +446,7 @@ export const CertificatesList =
     "/portfolio/pt": "Introdução ao React Hooks",
     "/portfolio/en": "introduction to React Hooks",
     "/portfolio/es": "Introducción a los React Hooks",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "031",
     "Month": "6"
 },
@@ -456,7 +456,7 @@ export const CertificatesList =
     "/portfolio/pt": "Trabalhando com States e Effects no React",
     "/portfolio/en": "Woorking with State and Effects in React",
     "/portfolio/es": "Trabajar con States y Effects en React",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "032",
     "Month": "6"
 },
@@ -466,7 +466,7 @@ export const CertificatesList =
     "/portfolio/pt": "Desenvolvimento de aplicações para internet com React",
     "/portfolio/en": "Developing web applications with React",
     "/portfolio/es": "Desarrollo de aplicaciones web con React",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "033",
     "Month": "6"
 },
@@ -476,7 +476,7 @@ export const CertificatesList =
     "/portfolio/pt": "Práticas avançadas em projetos com React",
     "/portfolio/en": "Advanced Practices in React",
     "/portfolio/es": "Prácticas avanzadas en proyectos con React",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "034",
     "Month": "6"
 },
@@ -486,7 +486,7 @@ export const CertificatesList =
     "/portfolio/pt": "Otimização de componentes React",
     "/portfolio/en": "Components Optimization React",
     "/portfolio/es": "Optimización de componentes React",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "035",
     "Month": "6"
 },
@@ -679,7 +679,7 @@ export const CertificatesList =
     "/portfolio/pt": "Trabalhando com módulos JavaScript",
     "/portfolio/en": "Working with JavaScript modules",
     "/portfolio/es": "Trabajando con módulos JavaScript",
-    "school": "Digital Inovation One",
+    "school": "D.I.O.",
     "id" : "036",
     "Month": "9"
 },

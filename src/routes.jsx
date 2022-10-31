@@ -8,19 +8,12 @@ export default function AppRouter() {
 
   const [language, setLanguage] = useState('/portfolio/en')
   
-  return (
-      <main className='container'>
+  return (      
         <Router>
           <Routes>
             <Route path="/portfolio" element={<LanguageSelection language={language} setLanguage={setLanguage}/>}/>
-          </Routes>                  
-          
-          <Routes>          
             <Route path={language} index element={<Home />}/>
-          </Routes>
-    
-          
-        </Router>
-      </main>
+          </Routes>          
+        </Router>      
     );
   }

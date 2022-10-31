@@ -49,34 +49,34 @@ export default function Courses() {
     `
     const Filters = styled.div`
         display: flex;
-        justify-content: space-around;
-        padding: 20px 0;
+        justify-content: center;
+        padding: 0 0 20px 0;
+        gap: 12px;
     `
 
     const SearchBox = styled.div`
-        align-items: center;
-        background-color: ${PrimaryColor};
-        border-radius: 15px;
         
+        background-color: ${PrimaryColor};
+        border-radius: 12px;
         display: flex;
-        gap: 8px;
-        height: 42px;
-        justify-content: space-between;
-        padding: 0 15px;
-        width: 180px;
-        margin-top: 13px;
+        margin: 12px 0;
+        gap: 9px;
+        height: 2.1vh;
+        padding: 9px 9px;
+        border: 1px solid grey;
     
     
     input{
         background-color: $grey;
         border: none;
         font-family: ${ThickFont};
-        font-size: large;
-        opacity: 90%;
+        font-size: medium;
         outline: none;
-        width: 200px;
+        width: 140px;
+
         &::placeholder {
         color: #4c4d5e;
+        text-align: center;
         
         &::placeholder {
             color: #4c4d5e;
@@ -99,7 +99,7 @@ export default function Courses() {
                     autoFocus="autofocus"
                     onChange={(event) => { event.preventDefault(); setSearch(event.target.value); } }
                     placeholder={Texts.keywords[`${location.pathname}`]} />
-                <FaSearch size={28} color={"black"} />
+                <FaSearch size={20} color={"black"} />
             </SearchBox>
             <Button active={true}>
                     <h4 onClick={() =>

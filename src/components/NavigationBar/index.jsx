@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Grafite from 'assets/img/tinta.png';
 import {Link, useLocation} from 'react-router-dom'
 import styled from 'styled-components'
-import { Horizontal, PrimaryColor, ThickFont, Vertical } from 'style/_variables'
+import { Horizontal, NarrowFont, PrimaryColor, ThickFont, Vertical } from 'style/_variables'
 import NavTitle from './NavTitle';
 import { Texts } from './NavigationBar.texts'
 
@@ -16,61 +16,60 @@ export default function NavigationBar () {
 
     const NavBar = styled.nav `
         position: fixed;
-        width: 80vw;
-        margin: 0 12vw 0 8vw;
+        margin-left: 12vw;
+        width:70vw;    
         display: flex;
         background-color: ${PrimaryColor};    
         z-index: 95;
-        padding: 4px 0 4px ${Horizontal};
+        padding: 4px ${Horizontal} 4px ${Horizontal};
         border-radius: 0 0 30px 30px;
         height:36px;
-
-        @media screen and (max-width: 690px)
-        {
-            margin: 0 0;
-            width:94vw;
-            
-        }  
+        justify-content: space-between;
     `
-    const Hamburguer =styled.div`
-        position: absolute;
-        right: 24px;
-        top: 0;
+    const Hamburguer =styled.div`                
         z-index: 100;
+        display: flex;
+        flex-wrap: no-wrap;
+        cursor: pointer;
 
+        p{
+            padding: 10px 4px 0 10px;
+            font-size: medium;
+            font-family: ${NarrowFont};
+        }
     `
     const Menu = styled.div`
         position:fixed;
         top: 0;
-        padding-top: 80px;
-        padding-right:32px;
+        padding: 80px ${Horizontal} 0 ${Horizontal};
+        margin-left: 58vw;
         background-color: ${PrimaryColor};   
-        display: ${ menu ? "grid" : "none"};        
+        display: ${ menu ? "grid" : "none"};    
         height: 480px;
-        right: 8%;
-        width: 300px;
+        width: 24vw;
         z-index: 90;        
         border-radius: 0 0 30px 30px;
-    h1{
         text-align: right;
+    h1{
         font-family: ${ThickFont};
         font-size: xx-large;
-        z-index: 100;
-       
+        z-index: 100;       
     }
 
-    @media screen and (max-width: 690px)
+    @media screen and (max-width: 780px)
         {
-            padding: 0;
-            width: 100vw;
-            
-        }  
+        width: 70vw;  
+        margin-left: 12vw;
+        text-align: center;
+        }        
+    }
     `
 
     const Bg = styled.img`
         position: absolute;
         width: 100%;
-        padding-top: 30px;
+        height: 100%;
+        top: 4vh;
     `
 
     
@@ -80,7 +79,7 @@ export default function NavigationBar () {
                 <NavTitle/>
 
                 <Hamburguer onClick={() => setMenu(!menu)}>
-                    {menu ? <IoClose size={44}/> : <IoMenu size={44}/>}
+                    {menu ? <><p>Fechar</p><IoClose size={32}/></> : <><p>Menu</p><IoMenu size={32}/></>}
                 </Hamburguer>
                 </NavBar>
                 <Menu>
