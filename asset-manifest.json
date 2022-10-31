@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.465d9e59.css",
-    "main.js": "/portfolio/static/js/main.96cdd3d1.js",
+    "main.js": "/portfolio/static/js/main.25a637ee.js",
     "static/media/ricardo_desenho.png": "/portfolio/static/media/ricardo_desenho.3185862a6357499d4abd.png",
     "static/media/tinta.png": "/portfolio/static/media/tinta.4bc493c8fe10b7fbb2b6.png",
     "index.html": "/portfolio/index.html",
     "main.465d9e59.css.map": "/portfolio/static/css/main.465d9e59.css.map",
-    "main.96cdd3d1.js.map": "/portfolio/static/js/main.96cdd3d1.js.map"
+    "main.25a637ee.js.map": "/portfolio/static/js/main.25a637ee.js.map"
   },
   "entrypoints": [
     "static/css/main.465d9e59.css",
-    "static/js/main.96cdd3d1.js"
+    "static/js/main.25a637ee.js"
   ]
 }
