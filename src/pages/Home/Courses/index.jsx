@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Container from "components/Container";
 import { useLocation } from "react-router-dom";
 import Table from "./Table";
 import { useEffect, useState } from "react";
 import { CertificatesList } from "./Table/CertificatesList";
-import ShowCertificate from "../../ShowCertificate";
+
 import PageSelector from "./PageSelector";
 import Filters from "./Filters";
 import Heading from "./Heading";
@@ -13,12 +14,9 @@ export default function Courses() {
     const [search, setSearch] = useState("")
     const [sortOrder, setSortOrder] = useState(true)
     const [list, setList] = useState(CertificatesList);
-    const [activePage, setActivePage] = useState(1);
-    const [showCertificate, setShowCertificate] = useState(false);
-    const [certificateActive, setCertificateActive] = useState('001');
+    const [activePage, setActivePage] = useState(1);   
 
     const location = useLocation()
-
    
     function searchButton(title) {
         const regex = new RegExp(search, 'i');
@@ -55,7 +53,7 @@ export default function Courses() {
                 setSearch={setSearch}
             />                
             
-            <Table list={list} activePage={activePage} showCertificate={showCertificate} setShowCertificate={setShowCertificate}/>
+            <Table list={list} activePage={activePage}/>
 
             <PageSelector list={list} activePage={activePage} setActivePage={setActivePage}/>
 

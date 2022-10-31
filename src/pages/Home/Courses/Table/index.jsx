@@ -1,14 +1,28 @@
-import { Link, useLocation } from "react-router-dom";
+import {useLocation } from "react-router-dom";
 import {BadgesList} from 'components/Bagdes/badgesList'
 import styled from 'styled-components';
 import {Texts} from "./Table.texts"
-import { ContrastColor, DarkColor, } from "style/_variables";
-import {AiOutlineFileSearch} from 'react-icons/ai';
+import { ContrastColor, DarkColor, Horizontal, PrimaryColor, Vertical, } from "style/_variables";
+import {AiOutlineFileSearch} from 'react-icons/ai'
+import { useState } from "react";
+import { FaWindowClose } from "react-icons/fa";
 
-export default function Table ({list, activePage, setCertificateAtive}) {
+
+export default function Table ({list, activePage}) {
+
 
     const location = useLocation();
+    const [id, setId] = useState("001");
+    const [name, setName] = useState("test")
+    const [showCertificate, setShowCertificate] = useState(false);
+
     
+    function popCertificate (id, name) {
+        setId(id);
+        setName(name);
+        setShowCertificate(true);
+    }
+
     const Table = styled.table`
         margin: auto;
         text-align: center;
@@ -24,6 +38,37 @@ export default function Table ({list, activePage, setCertificateAtive}) {
             padding: 4px 4px;
             vertical-align: middle;    
         }`
+
+    const Box = styled.div`
+        display: ${ showCertificate ? 'grid' : 'none'};
+        position: fixed;
+        top: 58px;       
+        background-color: ${PrimaryColor};
+        border-radius: 20px;
+        text-align: center;
+        padding: ${Vertical} ${Horizontal} 0 ${Horizontal};
+        height: fit-content;               
+        width: 90vw;
+        max-width: 1100px;
+        h3{
+            color: ${DarkColor};
+            padding: 12px 0 ;
+        }
+
+        img{
+            object-fit: contain;
+            width:100%;
+            height:100%;
+        }
+        @media screen and (max-width: 690px)
+        {        
+        top: 30vh;
+        }
+        `
+    const Close =styled.div`
+        position: absolute;
+        right: 10px;
+        `
           
 
       return(<>
@@ -37,19 +82,30 @@ export default function Table ({list, activePage, setCertificateAtive}) {
                     <th><p>{Texts.date[`${location.pathname}`]}</p></th>
                     <th><p></p></th>
                 </tr>
-            {list.slice(((activePage-1)*10),(activePage*10)).map(certificate =>
-            <>
+            {list.slice(((activePage-1)*10),(activePage*10)).map(certificate =>            
             <tr>
                 <td><h4>{BadgesList.icons[certificate.area[0]]} {BadgesList.icons[certificate.area[1]]} {BadgesList.icons[certificate.area[2]]}</h4></td>
                 <td><p>{certificate[`${location.pathname}`]}</p></td>
                 <td><p>{certificate.hours}</p></td>
                 <td><p>{certificate.school}</p></td>
                 <td><p>{certificate.Month}/2022</p></td>
-                <td><Link to={`#${certificate.id}`}><h3><AiOutlineFileSearch/></h3></Link></td>
-            </tr>            
-            </>
-        )}    
+                <td><h3>
+                    <AiOutlineFileSearch
+                        onClick={() =>
+                        popCertificate(`${certificate.id}` , `${certificate[location.pathname]}`)
+                        }/>
+                    </h3>                   
+                </td>
+            </tr>           
+            )}        
         </Table>        
+            <Box>
+                <Close onClick={() => setShowCertificate(false)}>
+                   <FaWindowClose size={44} />
+                </Close>
+                    <img src={`assets/img/certificates/${id}.png`}/>
+                <h3>{name}</h3>
+            </Box>              
         </>
 
 
