@@ -4,13 +4,10 @@ import { FaSearch, FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { PrimaryColor, ThickFont } from "style/_variables";
 import { Texts } from './Filters.texts.js'
-import { CertificatesList } from '../Table/CertificatesList.js';
 import { useEffect } from 'react';
 
 
-
-
-export default function Filters ({search, sortOrder, setSortOrder, setSearch}) {
+export default function Filters ({search, sortOrder, setSortOrder, setSearch, setTermSelected}) {
 
     const location = useLocation()
 
@@ -32,6 +29,7 @@ export default function Filters ({search, sortOrder, setSortOrder, setSearch}) {
     height: 2.1vh;
     padding: 9px 9px;
     border: 1px solid grey;
+    cursor: pointer;
 
 
     input{
@@ -52,16 +50,22 @@ export default function Filters ({search, sortOrder, setSortOrder, setSearch}) {
     }
     `
 
+    useEffect(() => {
+        const input = document.querySelector("input")
+        input.focus();
+    },search)
+
 return(
     <Filters >
         
         <SearchBox>
             <input
                 value={search}
-                autoFocus="autofocus"
-                onChange={(event) => { event.preventDefault(); setSearch(event.target.value); } }
+                                        
+                onChange={ (event) => setSearch(event.target.value) }                    
+                
                 placeholder={Texts.keywords[`${location.pathname}`]} />
-            <FaSearch size={20} color={"black"} />
+            <FaSearch size={22} color={"black"} onClick={() => setTermSelected(search)} />
         </SearchBox>
         
         <Button active={true}>

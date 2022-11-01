@@ -2,18 +2,18 @@ export const Texts =
 
 {
     title : {
-        "/portfolio/en" : "More Projects? Sure!",
-        "/portfolio/pt" : "Mais Projetos? Claro!" ,
-        "/portfolio/es" : "¿Más proyetos? ¡Por supuesto!"
+        "/en" : "More Projects? Sure!",
+        "/pt" : "Mais Projetos? Claro!" ,
+        "/es" : "¿Más proyetos? ¡Por supuesto!"
     },
     subTitle : {
-        "/portfolio/en" : "My repository",
-        "/portfolio/pt" : "Meu repositório" ,
-        "/portfolio/es" : "Mi repositorio"
+        "/en" : "My repository",
+        "/pt" : "Meu repositório" ,
+        "/es" : "Mi repositorio"
     },
     action : {
-        "/portfolio/en" : "Visit the page",
-        "/portfolio/pt" : "Visite a página" ,
-        "/portfolio/es" : "Visite la pagina" 
+        "/en" : "Visit the page",
+        "/pt" : "Visite a página" ,
+        "/es" : "Visite la pagina" 
     },
 }

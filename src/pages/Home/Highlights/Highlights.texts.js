@@ -2,29 +2,25 @@ export const Texts =
 
 {
     high01 : {
-        "/portfolio/en" : "16 years of experience in Sales and Marketing;",
-        "/portfolio/pt" : "16 anos de experiência em Vendas e Marketing;" ,
-        "/portfolio/es" : "16 años de experiencia en Ventas y Marketing;"
+        "/en" : "Freelancer developing web applications for companies and professionals, from concept design and prototyping, to development, APIs, server configuration and deployment.",
+        "/pt" : "Freelancer desenvolvendo aplicações web para empresas e profissionais, desde o desenho do conceito e prototipagem, até o desenvolvimento, APIs, configuração do servidor e deploy." ,
+        "/es" : "Freelancer desarrollando aplicaciones web para empresas y profesionales, desde el concepto de diseño y prototipado, hasta el desarrollo, APIs, configuración de servidores y deploy."
     },
     high02 : {
-        "/portfolio/en" : "Postgraduating in program analysis and development;",
-        "/portfolio/pt" : "Cursando pós graduação em Análise e desenvolvimento de programas;" ,
-        "/portfolio/es" : "Cursando un posgrado en análisis y desarrollo de programas;"
+        "/en" : "More than 70 courses in Front-End, Back-End, UX and SCRUM. Postgraduating in program analysis and development",
+        "/pt" : "Mais de 70 cursos nas áreas de Front-End, Back-End UX e SCRUM. Cursando pós graduação em Análise e desenvolvimento de programas;" ,
+        "/es" : "Más de 70 cursos en las áreas de Front-End, Back-End, UX y SCRUM. Cursando un posgrado en análisis y desarrollo de programas" 
     },
     high03 : {
-        "/portfolio/en" : "More than 50 courses in Front-End, Back-End, UX and SCRUM",
-        "/portfolio/pt" : "Mais de 50 cursos nas áreas de Front-End, Back-End UX e SCRUM" ,
-        "/portfolio/es" : "Más de 50 cursos en las áreas de Front-End, Back-End, UX y SCRUM" 
+        "/en" : "Professional in career transition ,with previous experience in Product Marketing and Trade Marketing;",
+        "/pt" : "Profissional em transição de área de atuação, com experiência anterior em Marketing de Produto e Trade Marketing;" ,
+        "/es" : "Profesional en transición de carrera, con experiencia previa en Marketing de Producto y Trade Marketing;"
     },
-    high04 : {
-        "/portfolio/en" : "Freelancer developing real web applications, looking for an opportunity;",
-        "/portfolio/pt" : "Freelancer desenvolvendo aplicações web reais, buscando uma oportunidade;" ,
-        "/portfolio/es" : "Freelancer desarollando aplicaciones web reales, en busca de una oportunidad;"
-    },
+    
     button01 : {
-        "/portfolio/en" : "More about me...",
-        "/portfolio/pt" : "Mais sobre mim..." ,
-        "/portfolio/es" : "Más sobre mí..."
+        "/en" : "More about me...",
+        "/pt" : "Mais sobre mim..." ,
+        "/es" : "Más sobre mí..."
     },
     
 

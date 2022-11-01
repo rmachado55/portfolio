@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Button from "components/Button";
 import { ProjectList } from './ProjectList.js'
 import { BadgesList } from "components/Bagdes/badgesList.js";
-import { Horizontal, PrimaryColor, SecondaryColor, Vertical } from "style/_variables.js";
+import { SecondaryColor, Vertical } from "style/_variables.js";
 import {SiGithub} from 'react-icons/si';
-import { V } from "@icons-pack/react-simple-icons";
+
 
 export default function Project () {
 
@@ -102,12 +102,12 @@ export default function Project () {
             <Title>
                 <h2>{ProjectList.name[`${location.pathname}`]}</h2>
                 
-                <a href={`${ProjectList.link}`} ><p>{ProjectList.link}</p></a>
+                <a href={`${ProjectList.link}`} target="_blank" rel="noreferrer"><p>{ProjectList.link}</p></a>
             </Title>
             <Project key={ProjectList.key} >
             <Left>
             <Picture src={`https://rmachado55.github.io/portfolio/assets/img/projects/${ProjectList.key}.png`} alt={ProjectList.link}></Picture>
-            <a target="_blank" href={`${ProjectList.repo}`}>
+            <a target="_blank" rel="noreferrer" href={`${ProjectList.repo}`}>
                 <Button active={ProjectList.active}>
                     <h4>{ProjectList.action[`${location.pathname}`]} <SiGithub/></h4>
                 </Button>

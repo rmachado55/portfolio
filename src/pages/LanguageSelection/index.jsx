@@ -84,18 +84,18 @@ export default function LanguageSelection ({setLanguage}){
             <p>Choose a language to begin:</p><p>Escolha um idioma para começar:</p><p>Elije un idioma para empezar</p>
             </CallToAction>
             <Options>    
-                <Link to="/portfolio/en" >
-                    <Option onClick={() => {setLanguage('/portfolio/en')}}>
+                <Link to="/en#home" >
+                    <Option onClick={() => {setLanguage('/en')}}>
                         <h3>English</h3>
                         </Option>
                         </Link>
-                <Link to="/portfolio/pt" >
-                    <Option onClick={() => {setLanguage('/portfolio/pt')}}>
+                <Link to="/pt#home" >
+                    <Option onClick={() => {setLanguage('/pt')}}>
                         <h3>Português</h3>
                         </Option>
                         </Link>
-                <Link to="/portfolio/es" >
-                    <Option onClick={() => {setLanguage('/portfolio/es')}}>
+                <Link to="/es#home" >
+                    <Option onClick={() => {setLanguage('/es')}}>
                         <h3>Español</h3>
                         </Option>
                         </Link>

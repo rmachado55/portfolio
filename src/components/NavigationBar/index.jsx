@@ -20,7 +20,7 @@ export default function NavigationBar () {
         width:70vw;    
         display: flex;
         background-color: ${PrimaryColor};    
-        z-index: 95;
+        z-index: 125;
         padding: 4px ${Horizontal} 4px ${Horizontal};
         border-radius: 0 0 30px 30px;
         height:36px;
@@ -47,13 +47,13 @@ export default function NavigationBar () {
         display: ${ menu ? "grid" : "none"};    
         height: 480px;
         width: 24vw;
-        z-index: 90;        
+        z-index: 110;        
         border-radius: 0 0 30px 30px;
         text-align: right;
     h1{
         font-family: ${ThickFont};
         font-size: xx-large;
-        z-index: 100;       
+        z-index: 110;       
     }
 
     @media screen and (max-width: 780px)

@@ -2,15 +2,15 @@ export const Texts =
 
 {
     portfolio : {
-        "/portfolio/en" : "Portfolio",
-        "/portfolio/pt" : "Portfólio" ,
-        "/portfolio/es" : "Portafolio",
+        "/en" : "Portfolio",
+        "/pt" : "Portfólio" ,
+        "/es" : "Portafolio",
         "/" : "Portfolio"
     },
     language : {
-        "/portfolio/en" : "Select Language",
-        "/portfolio/pt" : "Selecione o Idioma" ,
-        "/portfolio/es" : "Seleccione el Idioma",
+        "/en" : "Select Language",
+        "/pt" : "Selecione o Idioma" ,
+        "/es" : "Seleccione el Idioma",
         "/" : "Select Language"
     },
     

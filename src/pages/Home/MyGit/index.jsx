@@ -20,7 +20,7 @@ export default function MyGit() {
     overflow: auto;
     white-space: nowrap:
     padding: ${Vertical} 0;
-    width:90vw;
+    width:92vw;
         
     `
 
@@ -52,7 +52,12 @@ const location = useLocation();
             <Repositorys>
                 {ShowCase.map((repositorio) => {return(
                 <Box key={repositorio.api}>
-                <Repository action={Texts.action[`${location.pathname}`]} api={repositorio.api} title={repositorio.title[`${location.pathname}`]}/>
+                <Repository
+                    action={Texts.action[`${location.pathname}`]}
+                    api={repositorio.api}
+                    title={repositorio.title[`${location.pathname}`]}
+                    description={repositorio.description[`${location.pathname}`]}
+                />
                 </Box>          
                 
                 )})}

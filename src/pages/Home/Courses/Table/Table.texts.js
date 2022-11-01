@@ -2,23 +2,23 @@ export const Texts =
 
 {    
     name: {
-        "/portfolio/en" : "Certification",
-        "/portfolio/pt" : "Certificação" ,
-        "/portfolio/es" : "Certificación",
+        "/en" : "Certification",
+        "/pt" : "Certificação" ,
+        "/es" : "Certificación",
     },
     hours: {
-        "/portfolio/en" : "Hours",
-        "/portfolio/pt" : "Horas" ,
-        "/portfolio/es" : "Horas",
+        "/en" : "Hours",
+        "/pt" : "Horas" ,
+        "/es" : "Horas",
     },
     institution: {
-        "/portfolio/en" : "Teaching Institution",
-        "/portfolio/pt" : "Instituição de Ensino" ,
-        "/portfolio/es" : "Instituición de Enseñanza",
+        "/en" : "Teaching Institution",
+        "/pt" : "Instituição de Ensino" ,
+        "/es" : "Instituición de Enseñanza",
     },
     date: {
-        "/portfolio/en" : "Month / Year",
-        "/portfolio/pt" : "Mês / Ano" ,
-        "/portfolio/es" : "Mês / Año",
+        "/en" : "Month / Year",
+        "/pt" : "Mês / Ano" ,
+        "/es" : "Mês / Año",
     }    
 }

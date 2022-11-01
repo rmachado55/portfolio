@@ -36,7 +36,11 @@ export default function Table ({list, activePage}) {
         table, th, td{
             border: 1px solid ${ContrastColor};
             padding: 4px 4px;
-            vertical-align: middle;    
+            vertical-align: middle;
+            
+            h3{
+                cursor: zoom-in;
+            }
         }`
 
     const Box = styled.div`
@@ -53,6 +57,7 @@ export default function Table ({list, activePage}) {
         h3{
             color: ${DarkColor};
             padding: 12px 0 ;
+            
         }
 
         img{
@@ -68,6 +73,7 @@ export default function Table ({list, activePage}) {
     const Close =styled.div`
         position: absolute;
         right: 10px;
+        cursor: pointer;
         `
           
 

@@ -5,9 +5,9 @@ import Projects from './Projects';
 import NavigationBar from 'components/NavigationBar';
 import Contact from './Contact';
 import FooterBar from 'components/FooterBar';
+import { useEffect } from 'react';
 
 export default function Home () {
-    
 
     return(<>
             <NavigationBar/>

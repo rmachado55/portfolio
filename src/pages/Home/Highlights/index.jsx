@@ -5,15 +5,17 @@ import {Texts} from './Highlights.texts';
 import { useLocation } from 'react-router-dom';
 import Button from "components/Button";
 import styled from 'styled-components'
-import { Vertical } from "style/_variables";
+import { Horizontal, Vertical } from "style/_variables";
 
 export default function Highlights(){
 
-    const location = useLocation();   
+    const location = useLocation();
+    
     
     const Wrapper = styled.div`
     display: flex;    
-    padding: 14vh 0 14vh 0;    
+    padding: 40px 0 0 0;
+    height: 60vh;
 
     @media screen and (max-width: 690px)
         {        
@@ -24,10 +26,11 @@ export default function Highlights(){
 
     const Bg = styled.img`
     position: absolute;    
-    top: 3vh;
-    height: 74vh;    
+    top: 40px;
+    height: 70vh;    
     filter: opacity(20%);
-    object-fit: cover;   
+    object-fit: cover;
+    transition: width 5s;
     
     @media screen and (max-width: 690px)
         {        
@@ -39,10 +42,10 @@ export default function Highlights(){
     
 
     const Name = styled.div`
-    width: 40vw;
-    display: grid;
+    padding: 15vh ${Horizontal};
+    display: block;
     text-align: center;
-    height: 40vh;
+    
     
     @media screen and (max-width: 690px)
         {
@@ -51,11 +54,15 @@ export default function Highlights(){
         }    
     `
     const ShowCase = styled.div`
-    display: block;
+    display: grid;
+    z-index: 100;    
+    padding: 0 ${Horizontal};
     
     h3{
-        padding: 20px 0;      
+        padding: 20px 0;     
+    
     }
+
 
     @media screen and (max-width: 690px) {
         margin: ${Vertical} 0;
@@ -75,12 +82,19 @@ return(<Container dark={false} id={"home"}>
             <ShowCase>
             <h3 >{Texts.high01[`${location.pathname}`]}</h3>
             <h3 >{Texts.high02[`${location.pathname}`]}</h3>
-            <h3 >{Texts.high03[`${location.pathname}`]}</h3>
-            <h3 >{Texts.high04[`${location.pathname}`]}</h3>       
+            <h3 >{Texts.high03[`${location.pathname}`]}</h3>             
 
-            <Button active={true}><h4>{Texts.button01[`${location.pathname}`]}</h4></Button>
-            </ShowCase>
-        
+            
+                <a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/in/ricardomachado7/"} >
+                <Button active={true}>
+                
+                    <h4>{Texts.button01[`${location.pathname}`]}</h4>
+                
+                </Button>
+                </a>
+            
+            
+            </ShowCase>        
         </Wrapper>
     </Container>)
 }

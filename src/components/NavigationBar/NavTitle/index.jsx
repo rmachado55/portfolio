@@ -58,7 +58,7 @@ return(<>
             <h2>{Texts.portfolio[`${location.pathname}`]}</h2>
             <h1>Ricardo Machado</h1>            
         </Title>
-        <Link to={'/portfolio'}>
+        <Link to={'/'}>
         <Language>
             <GrLanguage size={16}/>
             <Display>{Texts.language[`${location.pathname}`]}</Display>

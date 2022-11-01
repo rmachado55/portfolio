@@ -6,7 +6,7 @@ import Badges from 'components/Bagdes'
 import { BadgesList } from 'components/Bagdes/badgesList'
 
 
-export default function Repository ({api, title, action}) {
+export default function Repository ({api, title, action, description}) {
 
 const Details = styled.div`
     height : 80px;
@@ -24,7 +24,7 @@ useEffect(() => {
     <>
         <Details>
             <h3>{title}</h3>
-            <p>{dataRepository.description}</p>
+            <p>{description}</p>
         </Details>
         <h2>{BadgesList.icons[`${dataRepository.language}`]}</h2>
         <p>{BadgesList.description[`${dataRepository.language}`]}</p>

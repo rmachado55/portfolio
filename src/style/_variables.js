@@ -7,7 +7,7 @@ export const NarrowFont = "'Comfortaa', cursive";
 export const ThickFont = "'Bebas Neue', cursive";
 
 export const Horizontal = "3vw"
-export const Vertical = "5vh"
+export const Vertical = "7vh"
 
 export const Break = "700px";
 

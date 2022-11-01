@@ -15,11 +15,13 @@ export default function Courses() {
     const [sortOrder, setSortOrder] = useState(true)
     const [list, setList] = useState(CertificatesList);
     const [activePage, setActivePage] = useState(1);   
+    const [termSelected, setTermSelected] = useState('');
 
     const location = useLocation()
-   
+
+    
     function searchButton(title) {
-        const regex = new RegExp(search, 'i');
+        const regex = new RegExp(termSelected, 'i');
         return regex.test(title)
     }
 
@@ -39,7 +41,7 @@ export default function Courses() {
             searchButton(item[`${location.pathname}`]))
             setList(sortList(newTable));
             setActivePage(1);
-    },[search, sortOrder])
+    },[termSelected, sortOrder])
         
     return(
         <Container dark={true} id={"certificates"}>
@@ -51,6 +53,7 @@ export default function Courses() {
                 sortOrder={sortOrder}
                 setSortOrder={setSortOrder}
                 setSearch={setSearch}
+                setTermSelected={setTermSelected}
             />                
             
             <Table list={list} activePage={activePage}/>
