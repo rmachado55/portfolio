@@ -1,21 +1,20 @@
-import DestaquesCv from './Highlights'
-import Repositorio from './MyGit/index.jsx';
-import Certificados from './Courses';
+import { Highlights } from './Highlights'
+import { MyGit } from './MyGit'
+import { Courses } from './Courses';
 import Projects from './Projects';
 import NavigationBar from 'components/NavigationBar';
 import Contact from './Contact';
 import FooterBar from 'components/FooterBar';
-import { useEffect } from 'react';
 
-export default function Home () {
+export const Home = () => {
 
     return(<>
             <NavigationBar/>
-            <DestaquesCv />
-            <Projects/>
-            <Repositorio />
-            <Certificados />
-            <Contact />
+            <Highlights />
+            <Projects/>            
+            <MyGit/>
+            <Courses />
+            {/* <Contact /> */}
             <FooterBar />
           </>)
 

@@ -1,13 +1,18 @@
-import Container from 'components/Container'
+import { Container } from 'components/Container'
 import { useLocation } from 'react-router-dom'
 import Repository from './Repository'
 import {ShowCase} from './Repository/showcase'
 import {Texts} from './MyGit.texts'
 import styled from 'styled-components'
-import { ContrastColor, Horizontal, Vertical } from 'style/_variables'
+import { Vertical } from 'style/_variables'
 
 
-export default function MyGit() {
+export const MyGit = () => {
+
+    const MyGitArea = styled.div`
+    position: relative;
+    
+    `
 
     const Heading = styled.div`
     text-align: center;
@@ -42,9 +47,8 @@ export default function MyGit() {
 
 const location = useLocation();
 
-    return(
-        <Container dark={false} id={"repository"} >
-        <>
+    return(<MyGitArea>
+        <Container dark={false} id={"myGit"} top={true} bottom={true} >        
             <Heading >
                 <h1>{Texts.title[`${location.pathname}`]}</h1>
                 <h2>{Texts.subTitle[`${location.pathname}`]}</h2> 
@@ -62,8 +66,7 @@ const location = useLocation();
                 
                 )})}
             </Repositorys>
-        
-        </>
         </Container>
-    )
+        </MyGitArea>
+        )
 }

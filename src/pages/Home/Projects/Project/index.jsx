@@ -5,6 +5,9 @@ import { ProjectList } from './ProjectList.js'
 import { BadgesList } from "components/Bagdes/badgesList.js";
 import { SecondaryColor, Vertical } from "style/_variables.js";
 import {SiGithub} from 'react-icons/si';
+import { useEffect } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function Project () {
@@ -13,13 +16,13 @@ export default function Project () {
 
     const Box = styled.div`
     display:grid;
-    margin: ${Vertical} 0;
+    margin: 40vh 0;
+    
     `
 
     const Title = styled.div`
     text-align: center;
     padding: ${Vertical} 0;
-    border-top: 1px dashed ${SecondaryColor};
     `
     
     
@@ -95,10 +98,10 @@ export default function Project () {
         }
     }}
     `
-
+    
     return(<>
         {ProjectList.map(ProjectList => 
-        <Box>
+        <Box id={`Box${ProjectList.key}`}>
             <Title>
                 <h2>{ProjectList.name[`${location.pathname}`]}</h2>
                 
@@ -138,6 +141,9 @@ export default function Project () {
         
         </Project>
         </Box>
+
+                        
+
     )}
 </>   
     )

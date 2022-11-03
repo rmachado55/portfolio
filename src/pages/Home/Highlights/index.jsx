@@ -1,21 +1,25 @@
-/* eslint-disable no-unused-expressions */
-import Container from "components/Container";
+import { Container } from "components/Container";
 import Ricardo from 'assets/img/ricardo_desenho.png';
 import {Texts} from './Highlights.texts';
 import { useLocation } from 'react-router-dom';
 import Button from "components/Button";
 import styled from 'styled-components'
 import { Horizontal, Vertical } from "style/_variables";
+import { useEffect} from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Highlights(){
+
+gsap.registerPlugin(ScrollTrigger);
+
+export const Highlights = () => {
 
     const location = useLocation();
-    
-    
+        
     const Wrapper = styled.div`
-    display: flex;    
-    padding: 40px 0 0 0;
-    height: 60vh;
+    display: flex; 
+    padding: 0 0 0 0;
+    height: 100vh;
 
     @media screen and (max-width: 690px)
         {        
@@ -25,10 +29,10 @@ export default function Highlights(){
     `
 
     const Bg = styled.img`
-    position: absolute;    
-    top: 40px;
-    height: 70vh;    
-    filter: opacity(20%);
+    position: absolute;   
+    width: 96vw;
+    height: 96vh;        
+    filter: opacity(30%);
     object-fit: cover;
     transition: width 5s;
     
@@ -42,7 +46,7 @@ export default function Highlights(){
     
 
     const Name = styled.div`
-    padding: 15vh ${Horizontal};
+    padding: 30vh ${Horizontal};
     display: block;
     text-align: center;
     
@@ -56,12 +60,9 @@ export default function Highlights(){
     const ShowCase = styled.div`
     display: grid;
     z-index: 100;    
-    padding: 0 ${Horizontal};
+    padding: 15vh ${Horizontal};
     
-    h3{
-        padding: 20px 0;     
-    
-    }
+ 
 
 
     @media screen and (max-width: 690px) {
@@ -71,30 +72,64 @@ export default function Highlights(){
         height: 21vh;          
     }                
     `
+    gsap.registerPlugin(ScrollTrigger)
 
-return(<Container dark={false} id={"home"}>
-        <Wrapper>
-        <Bg src={Ricardo} alt={'efeito de fundo'}/>
-            <Name>
-                <h1>Ricardo Machado</h1>
-                <h2>| Front-End</h2>
-            </Name>
-            <ShowCase>
-            <h3 >{Texts.high01[`${location.pathname}`]}</h3>
-            <h3 >{Texts.high02[`${location.pathname}`]}</h3>
-            <h3 >{Texts.high03[`${location.pathname}`]}</h3>             
+    useEffect(() => {
+      
+    gsap.from('#face', {
+        x: '40vw',
+        duration: 2
+        })
+    
+    gsap.from('#highlights', {
+        opacity: '0',
+        duration: 3,
+        delay: 1,        
+        })        
+    
+    gsap.to('#home', {
+        scrollTrigger: {
+            trigger: "#home",
+            start: "bottom 110%",
+            end: "bottom 0%",
+            scrub: true
+            
+        },
+        y: '-140vh',
+        duration: 3,
+        opacity: 0,
+        })          
+    
+    },[])           
 
-            
-                <a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/in/ricardomachado7/"} >
-                <Button active={true}>
+        return (<>
+            <Container dark={false} id={"home"} bottom={true} top={false}>
+                <Wrapper>
+                <Bg src={Ricardo} id={'face'} alt={'efeito de fundo'}/>
+                    <Name>
+                        <h1>Ricardo Machado</h1>
+                        <h2>| Front-End</h2>
+                    </Name>
+                    <ShowCase id={'highlights'}>
+                    <h3 >{Texts.high01[`${location.pathname}`]}</h3>
+                    <h3 >{Texts.high02[`${location.pathname}`]}</h3>
+                    <h3 >{Texts.high03[`${location.pathname}`]}</h3>             
+
+                    
+                        <a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/in/ricardomachado7/"} >
+                        <Button active={true}>
+                        
+                            <h4>{Texts.button01[`${location.pathname}`]}</h4>
+                        
+                        </Button>
+                        </a>
+                        
+                    </ShowCase>        
+                </Wrapper>
                 
-                    <h4>{Texts.button01[`${location.pathname}`]}</h4>
-                
-                </Button>
-                </a>
+            </Container>
             
-            
-            </ShowCase>        
-        </Wrapper>
-    </Container>)
-}
+                    
+            </>
+        )
+        }

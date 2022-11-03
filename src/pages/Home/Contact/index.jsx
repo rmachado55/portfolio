@@ -1,4 +1,4 @@
-import Container from "components/Container";
+import { Container } from "components/Container";
 import { Texts } from './Contact.texts'
 import { useLocation } from "react-router-dom";
 import {SiGithub, SiLinkedin, SiWhatsapp, SiHouse} from 'react-icons/si'

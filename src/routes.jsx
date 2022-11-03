@@ -1,5 +1,5 @@
-import Home from "pages/Home";
-import LanguageSelection from "pages/LanguageSelection";
+import { Home } from "pages/Home";
+import { LanguageSelection } from "pages/LanguageSelection";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 

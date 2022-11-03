@@ -90,17 +90,17 @@ h4{
 }
 @media screen and (max-width: 690px) {
     h4 {
-        font-size: 12px;    
+        font-size: 13px;    
     }
 }
 
-p{
+p, span{
     font-size:16px;
     font-weight: 200;
 }
 
 @media screen and (max-width: 690px) {
-    p{
-        font-size: 10px;    
+    p, span{
+        font-size: 12px;    
     }
 }

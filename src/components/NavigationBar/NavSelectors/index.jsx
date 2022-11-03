@@ -1,11 +1,11 @@
-import { Horizontal, NarrowFont, ThickFont, Vertical } from 'style/_variables';
+import { ContrastColor, NarrowFont, ThickFont,} from 'style/_variables';
 import styled from 'styled-components';
 import {} from 'style/_variables';
-import { Texts } from './NavTitle.texts';
+import { Texts } from '../NavBar.texts';
 import {Link, useLocation} from 'react-router-dom';
-import { GrLanguage } from 'react-icons/gr'
+import { IoIosGlobe } from 'react-icons/io'
 
-export default function NavTitle () {
+export const NavSelectors = () => {
 
     const location = useLocation()
 
@@ -36,14 +36,20 @@ export default function NavTitle () {
     `
 
     const Language =styled.div`
-    padding: 6px;
+    padding: 4px;
+    line-height: 140%;
     display: flex;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 8px;
     right: 90px;
     top: 6px;
-    font-family: ${NarrowFont};
-    font-size: medium;
+    font-family: ${NarrowFont};    
+
+    :hover{
+        color: ${ContrastColor};
+        border: 1px solid ${ContrastColor};
+    
+    }
     `
 
     const Display = styled.div`
@@ -60,8 +66,8 @@ return(<>
         </Title>
         <Link to={'/'}>
         <Language>
-            <GrLanguage size={16}/>
-            <Display>{Texts.language[`${location.pathname}`]}</Display>
+            <IoIosGlobe size={21}/>
+            <Display><span>{Texts.language[`${location.pathname}`]}</span></Display>
         </Language>
         </Link>
             

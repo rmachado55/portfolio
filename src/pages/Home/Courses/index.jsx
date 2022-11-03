@@ -1,27 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Container from "components/Container";
+import { Container } from "components/Container";
 import { useLocation } from "react-router-dom";
 import Table from "./Table";
 import { useEffect, useState } from "react";
 import { CertificatesList } from "./Table/CertificatesList";
-
 import PageSelector from "./PageSelector";
-import Filters from "./Filters";
+import { Selectors } from "./Selectors";
 import Heading from "./Heading";
+import { BackGroundFill } from "components/BackGroundFill";
 
-export default function Courses() {
+export const Courses = () => {
 
     const [search, setSearch] = useState("")
     const [sortOrder, setSortOrder] = useState(true)
     const [list, setList] = useState(CertificatesList);
     const [activePage, setActivePage] = useState(1);   
-    const [termSelected, setTermSelected] = useState('');
 
     const location = useLocation()
 
     
     function searchButton(title) {
-        const regex = new RegExp(termSelected, 'i');
+        const regex = new RegExp(search, 'i');
         return regex.test(title)
     }
 
@@ -41,19 +40,24 @@ export default function Courses() {
             searchButton(item[`${location.pathname}`]))
             setList(sortList(newTable));
             setActivePage(1);
-    },[termSelected, sortOrder])
+    },[search, sortOrder])
+
         
-    return(
+    return(<>
+        <BackGroundFill height={'140vh'}>
+            
+        </BackGroundFill>
+            
         <Container dark={true} id={"certificates"}>
 
             <Heading />
-
-            <Filters
+            
+            <Selectors
                 search={search}
+                setSearch={setSearch}   
                 sortOrder={sortOrder}
                 setSortOrder={setSortOrder}
-                setSearch={setSearch}
-                setTermSelected={setTermSelected}
+                        
             />                
             
             <Table list={list} activePage={activePage}/>
@@ -61,5 +65,6 @@ export default function Courses() {
             <PageSelector list={list} activePage={activePage} setActivePage={setActivePage}/>
 
         </Container>
+        </>
     )
 }
