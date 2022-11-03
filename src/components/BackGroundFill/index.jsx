@@ -6,10 +6,16 @@ export const BackGroundFill = ({height, children}) => {
 
     const BackGround = styled.div`   
     width: 100%;
-    padding: ${height} 0 0 0;
+    height: ${height};
     z-index: 0;
     background-color: ${DarkColor};
-     `
+    
+    @media screen and (max-width: 780px)
+    {
+        height: 90vh;
+    } 
+
+`
 
     return(
         <BackGround>

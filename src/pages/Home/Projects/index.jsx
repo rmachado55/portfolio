@@ -2,69 +2,43 @@ import { Container } from "components/Container";
 import Project from "./Project/index.jsx";
 import styled from 'styled-components'
 import NeonArrows from 'assets/img/setas.png'
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 import { Title } from "./Title/index.jsx";
 import { BackGroundFill } from "components/BackGroundFill/index.jsx";
-
-
-gsap.registerPlugin(ScrollTrigger);
-
 
 export default function Projects () {
 
 
     const ArrowLeft = styled.img`
     width: 20vw;
-    top: 60vh;
+    top: 48vh;
     left: 25vw;
     position: absolute;
     transform: rotate(90deg);
+
+    @media screen and (max-width: 780px)
+    {
+        left:10vw;
+        width:160px;
+        top: 82vh;
+    } 
     `
     const ArrowRight = styled.img`
     width: 20vw;
-    top: 60vh;
+    top: 48vh;
     right: 25vw;
     rotate: 90deg;
     position: absolute;
-    `
-
-    useEffect(() => {     
     
-        gsap.to('#ArrowLeft', {
-            scrollTrigger: {
-                trigger: '#ProjectsBackground',
-                start: "top -20%",
-                end: "top -110%",
-                scrub: true
-                
-            },
-            y: '50vh',
-            x:'-20vw',
-            scale: ('0.6'),     
-            rotation: '0'     
-            })
-
-        gsap.to('#ArrowRight', {
-            scrollTrigger: {
-                trigger: '#ProjectsBackground',
-                start: "top -20%",
-                end: "top -110%",
-                scrub: true
-                
-            },
-            y: '50vh',
-            x:'20vw',
-            scale: ('0.6'),             
-            rotation: '180'     
-            })
-    },[])
-
-
+    @media screen and (max-width: 780px)
+        {
+            right: 10vw;
+            width:160px;
+            top: 82vh;
+        }
+        `
 
     return(<>
-            <BackGroundFill height={'110vh'}>
+            <BackGroundFill height={'100vh'}>
                 <ArrowLeft src={NeonArrows} id={'ArrowLeft'}/>
                 <ArrowRight src={NeonArrows} id={'ArrowRight'} />
             </BackGroundFill>

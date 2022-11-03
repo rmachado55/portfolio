@@ -2,11 +2,6 @@ import { useLocation } from 'react-router-dom';
 import { Texts } from '../Projects.texts';
 import styled from 'styled-components';
 import { Vertical } from 'style/_variables.js';
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-
 export const Title = () => {
 
     const location = useLocation();
@@ -17,6 +12,12 @@ export const Title = () => {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+
+    @media screen and (max-width: 780px)
+        {
+            background-size: 92% 52%;
+                    }
+        
     `
 
     const Heading = styled.h1`
@@ -24,22 +25,6 @@ export const Title = () => {
     padding: ${Vertical} 0;
     ` 
 
-    useEffect(() => {     
-    
-        gsap.from('#ProjectsNeon', {
-            scrollTrigger: {
-                trigger: '#home',
-                start: "bottom 85%",
-                end: "bottom -10%",
-                scrub: true,                
-            },
-            opacity: '0.5',
-            y: '-5vw',
-            scale: 1.5,                    
-           
-            })
-        
-    },[])
 
     return(
         <Box id={'ProjectsNeon'}>

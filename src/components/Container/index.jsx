@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {DarkColor, SecondaryColor, PrimaryColor, Vertical, Horizontal, ThickFont, NarrowFont, ContrastColor} from 'style/_variables.js';
 
-export const Container = ({children, dark, id, bottom, top}) => {
+export const Container = ({children, dark, id, bottom, top, height}) => {
     
     const Theme = dark
 
@@ -16,7 +16,7 @@ export const Container = ({children, dark, id, bottom, top}) => {
     const Content = styled.div`
         padding:  ${Vertical} ${Horizontal};
         width: ${Theme ? 'none' : '100%'};
-        height: ${Theme ? 'none' : '90vh'};
+        height: ${height};
 
         h1 {
             color: ${PrimaryColor};

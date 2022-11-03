@@ -24,7 +24,16 @@ export const Menu = ({menu, setMenu }) => {
         z-index: 110;        
         border-radius: 0 0 30px 30px;
         text-align: right;
-    h1{
+    
+        @media screen and (max-width: 780px)
+        {
+            width: 70vw;  
+            margin-left: 12vw;
+            text-align: center;
+        }        
+    }
+    
+        h1{
         font-family: ${ThickFont};
         font-size: xx-large;
         z-index: 110;       
@@ -44,13 +53,7 @@ export const Menu = ({menu, setMenu }) => {
             transform: translate3d(1, 1, 1);
     }
 
-    @media screen and (max-width: 780px)
-        {
-            width: 70vw;  
-            margin-left: 12vw;
-            text-align: center;
-        }        
-    }
+    
     `
 
     const Bg = styled.img`
