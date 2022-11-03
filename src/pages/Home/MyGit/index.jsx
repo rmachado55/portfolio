@@ -5,13 +5,18 @@ import {ShowCase} from './Repository/showcase'
 import {Texts} from './MyGit.texts'
 import styled from 'styled-components'
 import { Vertical } from 'style/_variables'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from 'react'
 
+gsap.registerPlugin(ScrollTrigger);
 
 export const MyGit = () => {
 
+    const location = useLocation();
+
     const MyGitArea = styled.div`
-    position: relative;
-    
+    position: relative;    
     `
 
     const Heading = styled.div`
@@ -44,10 +49,38 @@ export const MyGit = () => {
         }
     `
     
+    useEffect(() => {
+        gsap.from('#skewBox', {
+            scrollTrigger: {
+                trigger: "#skewBox",
+                start: "top 90%",
+                end: "top 0%",
+                scrub: true,
+            },
+            scale: 2,
+            y: '-40vh',
+            duration: 1,
+            opacity:0.1
+            
+        })    
+        
+        gsap.to('#skewBox', {
+            scrollTrigger: {
+                trigger: "#skewBox",
+                start: "bottom 140%",
+                end: "bottom 50%",
+                scrub: true,
+            },
+            y: '-20vh',
+            duration: 1,
+            opacity:0.1
+            
+        })  
+        
+        },[]) 
 
-const location = useLocation();
 
-    return(<MyGitArea>
+    return(<MyGitArea id={'skewBox'}>
         <Container dark={false} id={"myGit"} top={true} bottom={true} >        
             <Heading >
                 <h1>{Texts.title[`${location.pathname}`]}</h1>

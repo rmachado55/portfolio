@@ -8,6 +8,8 @@ import PageSelector from "./PageSelector";
 import { Selectors } from "./Selectors";
 import Heading from "./Heading";
 import { BackGroundFill } from "components/BackGroundFill";
+import NeonBilboard from 'assets/img/neon.png'
+import styled from 'styled-components'
 
 export const Courses = () => {
 
@@ -42,10 +44,15 @@ export const Courses = () => {
             setActivePage(1);
     },[search, sortOrder])
 
-        
+    
+    const NeonSign = styled.img`       
+    width:74%;
+    margin: 0 13%;
+    `
+
     return(<>
-        <BackGroundFill height={'140vh'}>
-            
+        <BackGroundFill height={'90vh'}>
+            <NeonSign id={'NeonSign'} src={NeonBilboard}/>
         </BackGroundFill>
             
         <Container dark={true} id={"certificates"}>

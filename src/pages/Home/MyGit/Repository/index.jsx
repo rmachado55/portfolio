@@ -9,7 +9,8 @@ import { BadgesList } from 'components/Bagdes/badgesList'
 export default function Repository ({api, title, action, description}) {
 
 const Details = styled.div`
-    height : 80px;
+    padding: 24px;
+    height : 120px;
 `
 
 const [dataRepository, setDataRepository] = useState([])
@@ -24,9 +25,10 @@ useEffect(() => {
     <>
         <Details>
             <h3>{title}</h3>
+
             <p>{description}</p>
         </Details>
-        <h2>{BadgesList.icons[`${dataRepository.language}`]}</h2>
+        <h3>{BadgesList.icons[`${dataRepository.language}`]}</h3>
         <p>{BadgesList.description[`${dataRepository.language}`]}</p>
             
             

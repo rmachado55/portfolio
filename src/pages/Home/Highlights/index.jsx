@@ -30,8 +30,8 @@ export const Highlights = () => {
 
     const Bg = styled.img`
     position: absolute;   
-    width: 96vw;
-    height: 96vh;        
+    width: 76vw;
+    height: 94vh;        
     filter: opacity(30%);
     object-fit: cover;
     transition: width 5s;
@@ -72,8 +72,6 @@ export const Highlights = () => {
         height: 21vh;          
     }                
     `
-    gsap.registerPlugin(ScrollTrigger)
-
     useEffect(() => {
       
     gsap.from('#face', {
