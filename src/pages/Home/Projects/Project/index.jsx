@@ -16,7 +16,7 @@ export default function Project () {
 
     const Box = styled.div`
     display:grid;
-    margin: 40vh 0;
+    margin: 20vh 0;
     
     `
 

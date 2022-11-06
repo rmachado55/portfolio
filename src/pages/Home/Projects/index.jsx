@@ -10,30 +10,30 @@ export default function Projects () {
 
     const ArrowLeft = styled.img`
     width: 20vw;
-    top: 48vh;
+    top: 62vh;
     left: 25vw;
     position: absolute;
     transform: rotate(90deg);
 
     @media screen and (max-width: 780px)
     {
-        left:10vw;
-        width:160px;
-        top: 82vh;
+        left:5vw;
+        width:180px;
+        top: 71vh;
     } 
     `
     const ArrowRight = styled.img`
     width: 20vw;
-    top: 48vh;
+    top: 62vh;
     right: 25vw;
     rotate: 90deg;
     position: absolute;
     
     @media screen and (max-width: 780px)
         {
-            right: 10vw;
-            width:160px;
-            top: 82vh;
+            right: 5vw;
+            width:180px;
+            top: 71vh;
         }
         `
 

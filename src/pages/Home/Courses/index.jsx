@@ -47,11 +47,11 @@ export const Courses = () => {
     
     const NeonSign = styled.img`       
     width:74%;
-    margin: 0 13%;
+    margin: 70vh 13% 0 13%;
     `
 
     return(<>
-        <BackGroundFill height={'90vh'}>
+        <BackGroundFill height={'180vh'}>
             <NeonSign id={'NeonSign'} src={NeonBilboard}/>
         </BackGroundFill>
             

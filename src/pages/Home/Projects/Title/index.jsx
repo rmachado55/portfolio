@@ -8,14 +8,17 @@ export const Title = () => {
 
     const Box = styled.div`
     background-image: url('assets/img/YellowNeonBoard.png');
-    background-size: 50% 90%;
+    background-size: 90% 90%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 50%;
+    margin: auto;    
 
     @media screen and (max-width: 780px)
         {
-            background-size: 92% 52%;
+            background-size: 90% 74%;
+            margin-top: 40vh;
+            padding: 12px 40px;
                     }
         
     `

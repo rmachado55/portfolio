@@ -27,79 +27,80 @@ export const Animations = () => {
 
     
     // - - - P R O J E C T - - - //
-    gsap.to('#ArrowLeft', {
+
+    gsap.to("#ArrowLeft", {
         scrollTrigger: {
             trigger: "#ArrowLeft",
-            start: `${mobile ? "bottom 10%" : "bottom 70%"}`,
-            end: `${mobile ? "1px 40%" : "bottom 20%"}`,
-            pin: "true",
-            scrub: "true",
-     
-            
+            start: mobile ? 'bottom 65%' : 'bottom 70%',
+            end: mobile?  "bottom 2%" : "bottom 20%",       
+            scrub: "true",           
         },
-        y: `${mobile ? "45vh" : "45vh"}`,
-        x:`${mobile ? "-5vw" : "-20vw"}`,
-        scale:`${mobile ? "0.9" : "0.6"}`,
-     
-        duration: 1,     
-        rotation: '0'     
+        y: mobile ? "62vh" : "45vh",
+        x: mobile? "-8vw" : "-20vw",
+        scale: "0.6",     
+        duration: 3,     
+        rotation: mobile ? '60' :'0'     
         })
   
-    gsap.to('#ArrowRight', {
+    gsap.to("#ArrowRight", {
         scrollTrigger: {
             trigger: "#ArrowRight",
-            start: `${mobile ? "1px 80%" : "bottom 70%"}`,
-            end: `${mobile ? "1px 30%" : "bottom 20%"}`,
-            scrub: "true",
-           
-            
+            start: mobile ? 'bottom 65%' : 'bottom 70%',
+            end: mobile?  "bottom 2%" : "bottom 20%",
+            scrub: "true",            
         },
-        y: `${mobile ? "45vh" : "45vh"}`,
-        x:`${mobile ? "5vw" : "20vw"}`,
-        scale: ('0.6'),             
+        y: mobile ? "62vh" : "45vh",
+        x: mobile ? "8vw" : "20vw",
+        scale: "0.6",             
         duration: 3,
-        rotation: '180'
-             
+        rotation: mobile ? '130' :'180'             
         })
-    
+
+
+    // - - - P R O J E C T S - - -  
+        
     gsap.from('#ProjectsNeon', {
         scrollTrigger: {
             trigger: '#ProjectsNeon',
-            start: "top 105%",
-            end: "top 70%",
+            start: "top 69%",
+            end: (mobile ? "top 30%" : "top 10%"),
             scrub: true,                
             },
-            opacity: '0.5',
-            y: '-5vw',
+            opacity: '0',
+            y: (mobile ? '-25vh' : '-15vh'),
             scale: 1.5,                    
            
             })
+
+
+    // - - MY GIT - - 
+    let proxy = { skew: 0 },
+    skewSetter = gsap.quickSetter("#skewBox", "skewY", "deg"), 
+    clamp = gsap.utils.clamp(-5, 5);
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / -100);
+    
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {skew: 0,
+                     duration: 0.5,
+                     easeIn: "Elastic",
+                     overwrite: true,
+                     yoyo: true,
+                     yoyoEase: true,                   
+                     onUpdate: () => skewSetter(proxy.skew)});
+    }
+  }
+});
+
+// make the right edge "stick" to the scroll bar. force3D: true improves performance
+gsap.set("#skewBox", {transformOrigin: "right center", force3D: true});
   
+   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    },[])
+    },)
   
 
 }

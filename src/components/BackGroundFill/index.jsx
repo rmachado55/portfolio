@@ -12,7 +12,7 @@ export const BackGroundFill = ({height, children}) => {
     
     @media screen and (max-width: 780px)
     {
-        height: 90vh;
+        height: calc(${height}-40vh);
     } 
 
 `
