@@ -17,7 +17,12 @@ export default function Heading () {
 
     const Box = styled.div`
         text-align: center;
-        padding-bottom: ${Vertical};
+        padding: ${Vertical} 0;
+
+        @media screen and (max-width: 690px)
+        {        
+        padding: 0 0 ${Vertical} 0;        
+        }
     `
 
     return( 

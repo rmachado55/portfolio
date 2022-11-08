@@ -26,7 +26,7 @@ export default function Table ({list, activePage}) {
     const Table = styled.table`
         margin: auto;
         text-align: center;
-        width: 90vw;
+        width: 80vw;
         
         th{
             color: ${DarkColor};
@@ -41,19 +41,27 @@ export default function Table ({list, activePage}) {
             h3{
                 cursor: zoom-in;
             }
-        }`
+        }
+        
+        @media screen and (max-width: 780px){
+            width:95vw;
+        }
+
+        `
 
     const Box = styled.div`
         display: ${ showCertificate ? 'grid' : 'none'};
         position: fixed;
-        top: 58px;       
+        top: 58px;
+        right: 15vw;      
         background-color: ${PrimaryColor};
         border-radius: 20px;
         text-align: center;
         padding: ${Vertical} ${Horizontal} 0 ${Horizontal};
         height: fit-content;               
         width: 90vw;
-        max-width: 1100px;
+        max-width: 900px;
+
         h3{
             color: ${DarkColor};
             padding: 12px 0 ;
@@ -68,7 +76,9 @@ export default function Table ({list, activePage}) {
         @media screen and (max-width: 690px)
         {        
         top: 30vh;
+        right: 2vw;   
         }
+      
         `
     const Close =styled.div`
         position: absolute;
@@ -86,7 +96,7 @@ export default function Table ({list, activePage}) {
                     <th><p>{Texts.hours[`${location.pathname}`]}</p></th>
                     <th><p>{Texts.institution[`${location.pathname}`]}</p></th>
                     <th><p>{Texts.date[`${location.pathname}`]}</p></th>
-                    <th><p></p></th>
+                    <th><p>{Texts.zoom[`${location.pathname}`]}</p></th>
                 </tr>
             {list.slice(((activePage-1)*10),(activePage*10)).map(certificate =>            
             <tr>
@@ -109,8 +119,8 @@ export default function Table ({list, activePage}) {
                 <Close onClick={() => setShowCertificate(false)}>
                    <FaWindowClose size={44} />
                 </Close>
-                    <img src={`assets/img/certificates/${id}.png`}/>
-                <h3>{name}</h3>
+                    <img src={`assets/img/certificates/${id}.png`} alt={`${name}`}/>
+                <h4>{name}</h4>
             </Box>              
         </>
 

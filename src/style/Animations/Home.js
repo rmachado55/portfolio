@@ -16,7 +16,7 @@ export const Animations = () => {
         scrollTrigger: {
             trigger: "#home",
             start: `${mobile ? "top -1%" : "top 0"}`,
-            end: `${mobile ? "top -2%" : "=+10"}`,
+            end: `${mobile ? "top -20%" : "=+100"}`,
             scrub: true
             
         },
@@ -35,8 +35,8 @@ export const Animations = () => {
             end: mobile?  "bottom 2%" : "bottom 20%",       
             scrub: "true",           
         },
-        y: mobile ? "62vh" : "45vh",
-        x: mobile? "-8vw" : "-20vw",
+        y: mobile ? "67vh" : "45vh",
+        x: mobile? "-12vw" : "-20vw",
         scale: "0.6",     
         duration: 3,     
         rotation: mobile ? '60' :'0'     
@@ -49,8 +49,8 @@ export const Animations = () => {
             end: mobile?  "bottom 2%" : "bottom 20%",
             scrub: "true",            
         },
-        y: mobile ? "62vh" : "45vh",
-        x: mobile ? "8vw" : "20vw",
+        y: mobile ? "67vh" : "45vh",
+        x: mobile ? "12vw" : "20vw",
         scale: "0.6",             
         duration: 3,
         rotation: mobile ? '130' :'180'             
@@ -76,27 +76,25 @@ export const Animations = () => {
     // - - MY GIT - - 
     let proxy = { skew: 0 },
     skewSetter = gsap.quickSetter("#skewBox", "skewY", "deg"), 
-    clamp = gsap.utils.clamp(-5, 5);
+    clamp = gsap.utils.clamp(-2, 2);
 
-ScrollTrigger.create({
-  onUpdate: (self) => {
+    ScrollTrigger.create({
+    onUpdate: (self) => {
     let skew = clamp(self.getVelocity() / -100);
-    
+
     if (Math.abs(skew) > Math.abs(proxy.skew)) {
-      proxy.skew = skew;
-      gsap.to(proxy, {skew: 0,
-                     duration: 0.5,
-                     easeIn: "Elastic",
-                     overwrite: true,
-                     yoyo: true,
-                     yoyoEase: true,                   
-                     onUpdate: () => skewSetter(proxy.skew)});
+        proxy.skew = skew;
+        gsap.to(proxy, {skew: 0,
+                        duration: 0.3,
+                        easeIn: "Elastic",
+                        overwrite: true,                                       
+                        onUpdate: () => skewSetter(proxy.skew)});
     }
-  }
-});
+    }
+    });
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
-gsap.set("#skewBox", {transformOrigin: "right center", force3D: true});
+gsap.set("#skewBox", {transformOrigin: "center center", force3D: true});
   
    
   

@@ -4,8 +4,9 @@ import Repository from './Repository'
 import {ShowCase} from './Repository/showcase'
 import {Texts} from './MyGit.texts'
 import styled from 'styled-components'
-import { Vertical } from 'style/_variables'
+import { PrimaryColor, Vertical } from 'style/_variables'
 import { SiGithub } from 'react-icons/si'
+import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa'
 
 export const MyGit = () => {
 
@@ -13,46 +14,67 @@ export const MyGit = () => {
 
     const MyGitArea = styled.div`
     position: relative;
-    width:50vw;
+    width: 100%;
     `
 
     const Heading = styled.div`
     text-align: center;
     `
 
+    const Carroussel = styled.div`
+    display: flexbox;
+    justify-content: space-between;
+    padding: ${Vertical} 0;
+    width: 98vw;
+    
+    h1{
+        font-size: 10vw;
+        margin: auto;
+        filter: drop-shadow(4px 4px 4px #000000);
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 690px){
+        h1{
+            font-size:62px;
+        }
+    }
+    `
+
     const Repositorys= styled.div`
     display: flexbox;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow: auto;
-    white-space: nowrap;
-    padding: ${Vertical} 0;
-    width: 92vw;        
+    overflow-x: scroll;
+    width: 60vw;
+    filter: drop-shadow(4px 4px 4px #000000)     
     `
 
     const Box = styled.div`
-    display: grid;
-    width: 300px;
+    display: block;
+    width: 400px;
     text-align: center;
     padding: 16px 16px;
-    margin: ${Vertical} 16px;
-    background: rgba(255, 255, 255, 0.3);
+    margin: 0 16px 16px 16px;
+    background: rgba(250, 240, 80, 1);
     border-radius: 30px;
     
     @media screen and (max-width: 690px)
-        {        
-        width:140px;        
+        {
+        margin: 0 16px 0 16px;        
+        width: 160px;        
         }
     `
     
 
     return(<MyGitArea id={'skewBox'}>
-        <Container dark={false} id={"myGit"} top={true} bottom={true} >        
+        <Container dark={false} id={"myGit"} top={true} bottom={true} position={'absolute'} height={'65vh'} >        
             <Heading >
                 <h1>{Texts.title[`${location.pathname}`]}</h1>
                 <h2>{Texts.subTitle[`${location.pathname}`]}<SiGithub/></h2> 
             </Heading>
-            <Repositorys>
+            <Carroussel>
+            <h1 onClick={() => document.getElementById('scrollable').scrollLeft -=160}><FaAngleDoubleLeft/></h1>
+            <Repositorys id={"scrollable"}>
                 {ShowCase.map((repositorio) => {return(
                 <Box key={repositorio.api}>
                 <Repository
@@ -64,7 +86,10 @@ export const MyGit = () => {
                 </Box>          
                 
                 )})}
+                                
             </Repositorys>
+            <h1 onClick={() => document.getElementById('scrollable').scrollLeft +=160}><FaAngleDoubleRight/></h1>
+            </Carroussel>
         </Container>
         </MyGitArea>
         )

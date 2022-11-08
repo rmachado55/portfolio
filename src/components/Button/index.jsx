@@ -17,6 +17,6 @@ export default function Button ({active, children}){
     `
 
     return(
-        <Button>{children}</Button>
+        <Button >{children}</Button>
     )
 }

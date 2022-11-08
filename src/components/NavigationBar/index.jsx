@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components'
 import { Horizontal, PrimaryColor } from 'style/_variables'
 import { NavSelectors } from './NavSelectors';
@@ -6,13 +6,14 @@ import { Hamburguer } from './Hamburguer';
 import { Menu } from './Menu';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEventCallback } from '@mui/material';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function NavigationBar () {
   
     const [menu, setMenu] = useState(false)
+
 
     const NavBar = styled.nav `
         position: fixed;
@@ -28,12 +29,12 @@ export default function NavigationBar () {
     `
     
     return(
-    <>
+<>
         <NavBar>
             <NavSelectors/>
             <Hamburguer menu={menu} setMenu={setMenu}/>
         </NavBar>
         <Menu menu={menu} setMenu={setMenu} />
-    </>
+        </>
     )
 }

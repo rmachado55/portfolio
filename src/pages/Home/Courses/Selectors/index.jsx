@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Button from "components/Button";
 import { FaSearch, FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-import { PrimaryColor} from "style/_variables";
 import { Texts } from './Selectors.texts.js'
 import Search from './Search/index.jsx';
 
@@ -17,24 +16,14 @@ export const Selectors = ({search, sortOrder, setSortOrder, setSearch}) => {
     gap: 12px;
     `
 
-    const SearchBox = styled.div`
-    background-color: ${PrimaryColor};
-    width: 190px;
-    border-radius: 12px;
-    display: flex;
-    margin: 12px 0;
-    gap: 9px;
-    height: 2.1vh;
-    padding: 9px 9px;
-    border: 1px solid grey;    
-    `
-
 return(
     <Box>
-        <SearchBox>            
-            <Search search={search} setSearch={setSearch}/>           
-            <FaSearch size={28} color={"black"}/>
-        </SearchBox>                   
+        <Search search={search}/>
+        <Button active={true}>
+            <h4 onClick={() => setSearch(document.getElementById('search').value) }>{Texts.search[`${location.pathname}`] + " "}         
+            <FaSearch color={"black"} /></h4>
+        </Button>
+        
         <Button active={true}>
                 <h4 onClick={() => setSortOrder(!sortOrder)}>
                     {Texts.sortBy[`${location.pathname}`]}

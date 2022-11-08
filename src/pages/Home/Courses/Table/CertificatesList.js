@@ -742,4 +742,15 @@ export const CertificatesList =
     "school": "Alura",
     "id" : "068",
     "Month": "10"
-}]
+},
+{
+    "area": ["logic"],
+    "hours": "10",
+    "/pt": "S.E.O. - Otimizando seu site.",
+    "/en": "S.E.O - Optimizating your website.",
+    "/es": "S.E.O - Optimizando tu sitio web",
+    "school": "Alura",
+    "id" : "075",
+    "Month": "11"
+},
+]

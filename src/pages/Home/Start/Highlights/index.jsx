@@ -9,12 +9,12 @@ export const Highlights = () => {
     
     const Box = styled.div`
     animation-name: smooth;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;  
     display: block;
     z-index: 100;    
     padding: 90px 0;
-    width: 55vw;
+    width: 50vw;
     text-align: justify;
 
     h3{
@@ -36,7 +36,7 @@ export const Highlights = () => {
     @keyframes smooth {
         from {
             opacity: 0;
-            scale:1.5;        
+            scale:1.2;        
         }
         to {
             opacity: 100%;

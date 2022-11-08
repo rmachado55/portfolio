@@ -16,8 +16,8 @@ export const Courses = () => {
     const [search, setSearch] = useState("")
     const [sortOrder, setSortOrder] = useState(true)
     const [list, setList] = useState(CertificatesList);
-    const [activePage, setActivePage] = useState(1);   
-
+    const [activePage, setActivePage] = useState(1);
+    
     const location = useLocation()
 
     
@@ -46,12 +46,31 @@ export const Courses = () => {
 
     
     const NeonSign = styled.img`       
-    width:74%;
-    margin: 70vh 13% 0 13%;
+    width: 30%;
+    margin: 101vh 0 0 35%;
+    animation-name: flash;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
+
+    @media screen and (max-width: 780px)
+    {
+        width: 60%;
+        margin: 100vh 20% 0 20%;
+    }
+    
+    @keyframes flash{
+        0%{ opacity: 0.2 }
+        40%{ opacity: 1 }
+        70%{ opacity: 0.4 }
+        97%{ opacity: 1 }
+        98%{ opacity: 0.4 }
+        100%{ opacity: 1 }
+    }
     `
 
     return(<>
-        <BackGroundFill height={'180vh'}>
+        <BackGroundFill height={'124vh'}>
             <NeonSign id={'NeonSign'} src={NeonBilboard}/>
         </BackGroundFill>
             
@@ -63,8 +82,7 @@ export const Courses = () => {
                 search={search}
                 setSearch={setSearch}   
                 sortOrder={sortOrder}
-                setSortOrder={setSortOrder}
-                        
+                setSortOrder={setSortOrder}                               
             />                
             
             <Table list={list} activePage={activePage}/>

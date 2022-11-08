@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import Button from "components/Button";
 import { ProjectList } from './ProjectList.js'
 import { BadgesList } from "components/Bagdes/badgesList.js";
-import { SecondaryColor, Vertical } from "style/_variables.js";
+import { Vertical } from "style/_variables.js";
 import {SiGithub} from 'react-icons/si';
-import { useEffect } from "react";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 
 export default function Project () {
@@ -16,8 +14,13 @@ export default function Project () {
 
     const Box = styled.div`
     display:grid;
-    margin: 20vh 0;
-    
+    margin: 20vh 15vw;
+    width: 70vw;
+    @media screen and (max-width: 690px)
+    {
+        margin:20vh 4vw;
+        width:92vw;
+    }
     `
 
     const Title = styled.div`
@@ -59,13 +62,13 @@ export default function Project () {
     }
     `
     const Picture = styled.img`
-    width: 30vw;
+    width: 420px;
     object-fit: cover;
     border-radius: 20px;
 
     @media screen and (max-width: 690px)
     {
-        width: 94vw;
+        width: 92vw;
     }
     `
 
@@ -73,6 +76,7 @@ export default function Project () {
     display: flex;
     flex-wrap: wrap;    
     margin: ${Vertical} 0 0 0;     
+    
     `
 
     const Icons = styled.div`
@@ -80,7 +84,7 @@ export default function Project () {
     padding: 0 13px;
     text-align: center;  
     font-size: 30px;
-
+    
     p{
         font-size: 10px;
         line-height: 120%;
@@ -96,16 +100,20 @@ export default function Project () {
         p{
             font-size:8px;
         }
-    }}
+    }
+}
     `
+
+    const Disclaimer = styled.p`
+    font-size: 10px;`
     
     return(<>
         {ProjectList.map(ProjectList => 
         <Box id={`Box${ProjectList.key}`}>
             <Title>
-                <h2>{ProjectList.name[`${location.pathname}`]}</h2>
-                
-                <a href={`${ProjectList.link}`} target="_blank" rel="noreferrer"><p>{ProjectList.link}</p></a>
+            <a href={`${ProjectList.link}`} target="_blank" rel="noreferrer">
+                <h2>{ProjectList.name[`${location.pathname}`]}</h2>                
+                <p>{ProjectList.link}</p></a>
             </Title>
             <Project key={ProjectList.key} >
             <Left>
@@ -133,9 +141,10 @@ export default function Project () {
                         <p>{BadgesList.description[topics]}</p>
                         </Icons>
                         )}            
-                    )}
-
+                    )}                
                 </Badges>
+                <Disclaimer>{ProjectList.disclaimer[`${location.pathname}`]} </Disclaimer>
+                
             
         </Description>
         

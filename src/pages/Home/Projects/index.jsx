@@ -10,30 +10,30 @@ export default function Projects () {
 
     const ArrowLeft = styled.img`
     width: 20vw;
-    top: 62vh;
-    left: 25vw;
+    top: 64vh;
+    left: 20vw;
     position: absolute;
     transform: rotate(90deg);
 
     @media screen and (max-width: 780px)
     {
-        left:5vw;
-        width:180px;
-        top: 71vh;
+        left:8vw;
+        width:160px;
+        top: 73vh;
     } 
     `
     const ArrowRight = styled.img`
     width: 20vw;
-    top: 62vh;
-    right: 25vw;
+    top: 64vh;
+    right: 20vw;
     rotate: 90deg;
     position: absolute;
     
     @media screen and (max-width: 780px)
         {
-            right: 5vw;
-            width:180px;
-            top: 71vh;
+            right: 6vw;
+            width:160px;
+            top: 74vh;
         }
         `
 
@@ -42,7 +42,7 @@ export default function Projects () {
                 <ArrowLeft src={NeonArrows} id={'ArrowLeft'}/>
                 <ArrowRight src={NeonArrows} id={'ArrowRight'} />
             </BackGroundFill>
-            <Container id={'projects'} dark={true} top={false} bottom={false}>
+            <Container id={'projects'} dark={true} >
                 <Title/>
                 <Project />
             </Container>

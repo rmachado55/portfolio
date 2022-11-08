@@ -8,8 +8,9 @@ export const Name = () => {
     padding: 5vh ${Horizontal};
     display: block;
     text-align: center;
-    width: 32vw;
+    width: 31vw;
     height:70vh;
+
     
     
     @media screen and (max-width: 690px)
@@ -22,18 +23,19 @@ export const Name = () => {
 
     const Bg = styled.img`
     position: absolute;
-    left: 12vw;
+    left: 9vw;
     top: 34vh; 
-    width: 300px;        
-    filter: opacity(60%) sepia(60%);   
+    width: 290px;        
+    filter: opacity(40%);   
     transition: width 5s;
+    z-index: -1;
     
     @media screen and (max-width: 690px)
         {                     
             
-            left:28vw;
+            left:24vw;
             top: 26vh;
-            width: 190px;            
+            width: 200px;            
 
         }
     `

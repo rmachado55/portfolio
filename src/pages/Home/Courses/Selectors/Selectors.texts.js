@@ -10,6 +10,10 @@ export const Texts =
         "/en" : "Sort by Date ",
         "/pt" : "Ordenador por Data " ,
         "/es" : "Ordenar por fecha ",
+    },
+    search : {
+        "/en" : "Search",
+        "/pt" : "Buscar" ,
+        "/es" : "Buscar",
     }
-    
 }

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import {DarkColor, SecondaryColor, PrimaryColor, Vertical, Horizontal, ThickFont, NarrowFont, ContrastColor} from 'style/_variables.js';
+import {DarkColor, SecondaryColor, PrimaryColor, Vertical, ThickFont, NarrowFont, ContrastColor} from 'style/_variables.js';
 
-export const Container = ({children, dark, id, bottom, top, height}) => {
+export const Container = ({children, dark, id, bottom, top, height, position}) => {
     
     const Theme = dark
 
     const Container = styled.section`
-        position: ${Theme ? 'none' : 'absolute'};        
+        position: ${position};        
         background-color: ${Theme ? DarkColor : SecondaryColor};
         color: ${Theme ? ContrastColor : DarkColor};
         font-family: ${Theme ? NarrowFont : ThickFont};
@@ -14,8 +14,8 @@ export const Container = ({children, dark, id, bottom, top, height}) => {
         `
 
     const Content = styled.div`
-        padding:  ${Vertical} ${Horizontal};
-        width: ${Theme ? 'none' : '100%'};
+        padding:  ${Vertical} 0;
+        width: ${Theme ? '100vw' : '100vw'};
         height: ${height};
 
         h1 {
@@ -30,14 +30,12 @@ export const Container = ({children, dark, id, bottom, top, height}) => {
         }
     `
     const TransitionTop = styled.div`    
-    height: 2vh;
-    width:100%;    
+    height: 2vh;   
     background-image: ${top ? `linear-gradient(rgba(20,20,20,0.9), ${SecondaryColor})` : 'none'};
     `
 
     const TransitionBottom = styled.div`    
-    height: 2vh;
-    width:100%;    
+    height: 2vh; 
     background-image: ${bottom ? `linear-gradient(${SecondaryColor}, rgba(20,20,20,0.9))` : 'none'};
     `
 

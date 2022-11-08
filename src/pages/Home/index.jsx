@@ -16,7 +16,7 @@ export const Home = () => {
             <Projects/>            
             <MyGit/>
             <Courses />
-            {/* <Contact /> */}
+            <Contact />
             <FooterBar />
           </>)
 

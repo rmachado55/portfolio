@@ -55,23 +55,30 @@ export const LanguageSelection = ({setLanguage}) => {
     
 
     const Img = styled.div`
-    animation-name: splash;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
+    
+    display: flex;    
     position: absolute;
     z-index: -1;
     
     img{
-    margin: ${number*0.4}vh 2vw 2vh ${number*0.3}vw ;
-    width: 50vw;
-    transform: rotate(${number*1.5}deg);
-    }
+        animation-duration: 4s;
+        animation-timing-function: ease-out;
+        animation-name: splash;   
+        margin: 1vh 3vw 3vh ${number*0.7}vw ;
+        width: 50vw;
+        transform: rotate(${number*7}deg);
+        filter: brightness(${number*3.8}%);
+        }
 
     @media screen and (max-width: 690px)
-    
-    img{
-    height:30vh;
-    }
+        {
+            img{
+                width: 85vw;
+                margin: ${number*0.7}vh 1vw 1vh 1vw ;
+                filter: brightness(${number*3.8}%);
+
+            }
+        }    
 
     @keyframes splash {
     0% {
@@ -79,7 +86,7 @@ export const LanguageSelection = ({setLanguage}) => {
         opacity: 1;
     }
     100% {
-        scale: 0.9;
+        scale: 0.99;
         opacity :0}
     }
 
@@ -155,7 +162,8 @@ export const LanguageSelection = ({setLanguage}) => {
         </Wrapper>
         
         <Img>
-                <img src={Splash} />
+                <img src={Splash}/>                
+
         </Img>  
             <Content> 
             <Greeting>
@@ -165,17 +173,17 @@ export const LanguageSelection = ({setLanguage}) => {
             <p>Choose a language to begin:</p><p>Escolha um idioma para começar:</p><p>Elije un idioma para empezar</p>
             </CallToAction>
             <Options>    
-                <Link to="/en#home" >
+                <Link to="/en" >
                     <Option onClick={() => {setLanguage('/en')}}>
                         <h3>English</h3>
                         </Option>
                         </Link>
-                <Link to="/pt#home" >
+                <Link to="/pt" >
                     <Option onClick={() => {setLanguage('/pt')}}>
                         <h3>Português</h3>
                         </Option>
                         </Link>
-                <Link to="/es#home" >
+                <Link to="/es" >
                     <Option onClick={() => {setLanguage('/es')}}>
                         <h3>Español</h3>
                         </Option>

@@ -20,5 +20,10 @@ export const Texts =
         "/en" : "Month / Year",
         "/pt" : "Mês / Ano" ,
         "/es" : "Mês / Año",
-    }    
+    },
+    zoom:{
+        "/en" : "Zoom",
+        "/pt" : "Zoom" ,
+        "/es" : "Zoom",
+    }       
 }

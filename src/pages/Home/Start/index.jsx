@@ -24,7 +24,7 @@ export const Start = () => {
      
 
     return (
-        <Container dark={false} id={"home"} bottom={true} top={false} height={'65vh'}>
+        <Container dark={false} id={"home"} bottom={true} top={false} height={'65vh'} position={'absolute'} >
             <Wrapper>
                 
                 <Name />

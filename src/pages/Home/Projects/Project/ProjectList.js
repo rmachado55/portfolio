@@ -11,22 +11,22 @@ export const ProjectList = [
                 "Page developed from  the scratch;",
                 "FIGMA prototyping for customer approval;",
                 "Significant improvement in browsing speed;",
-                "Creation of multiple Landing Pages for SEO strategy;",
-                "Reuse of components" ],
+                "Reuse of components;",
+                "Styling: SASS + Bootstrap;"],
             
             "/pt" : [
                 "Página Redesenvolvido praticamento do Zero;",
                 "Prototipagem no Figma para aprovação do cliente;",
                 "Melhora significativa de velocidade de navegação;",
-                "Criação de várias Landing pages, para estratégia de SEO;",
-                "Reutilização de componentes"],
+                "Reutilização de componentes;",
+                "Estilo: SASS + Bootstrap;"],
 
             "/es" : [
                 "Página reconstruida prácticamente desde cero;",
                 "Creación de prototipo en Figma para la aprobación del cliente;",
-                "Mejora significativa en la velocidad de navegación;",
-                "Creación de múltiples Landing Pages para estrategia de SEO;",
-                "Reutilización de componentes"]
+                "Mejora significativa en la velocidad de navegación;",        
+                "Reutilización de componentes;",
+                "Estilo: SASS + Bootstrap;"]
         },
         action : {
             "/en" : "More details",
@@ -35,9 +35,14 @@ export const ProjectList = [
         },
         topics : ["figma", "sass", "boot", "javascript", "hooks", "react", "router", "html"],
         active : true,
-        link : "www.leapsicanalise.com",
+        link : "https://leapsicanalise.com",
         repo: "https://github.com/rmachado55/leapsicanalise.com",
-        key: "healthprofessional"
+        key: "healthprofessional",
+        disclaimer: {
+            "/en" : "",
+            "/pt" : "",
+            "/es" : ""
+        },
     },    
     {
         name : {
@@ -51,21 +56,24 @@ export const ProjectList = [
                 "Menu for sorting options by Price, Number of People etc...;",
                 "Search Option (case INsensitive);",
                 "Home that introduces new dishes every visit;",
-                "Route navigation including dish ID;"],
+                "Route navigation including dish ID;",
+                "Styling: SASS;"],
             
             "/pt" : [
                 "Cardápio com opções diversas de filtro como Vegetariano, Massas;",
                 "Ordenação dos pratos por Preço, Quantidade de pessoas etc...",
                 "Opção de Busca (case INsensitive);",
                 "Home que apresenta novos pratos a cada visita;",
-                "Navegação por Rota incluindo ID dos pratos;"],
+                "Navegação por Rota incluindo ID dos pratos;",
+                "Estilo: SASS"],
 
             "/es" : [
                 "Cardápio con variadas opciones de filtros;",
                 "Ordenar los platos por Precio, Número de personas, etc...",
                 "Opción de búsqueda (case INsensitive);",
                 "Home que introduce nuevos platos cada visita;",
-                "Navegación de ruta, incluida la ID del plato;"]
+                "Navegación de ruta, incluida la ID del plato;",
+                "Estilo: SASS"]
         },
         action : {
             "/en" : "More details",
@@ -76,9 +84,12 @@ export const ProjectList = [
         active : true,
         link : "https://rmachado55.github.io/restaurante-cardapio-online",
         repo : "https://github.com/rmachado55/restaurante-cardapio-online",
-        key: "restaurant" 
-    },
-    {
+        key: "restaurant",
+        disclaimer : {
+            "/en" : "*Made based on activity from Alura's course",
+            "/pt" : "*Feito com base em atividade de Curso da Alura",
+            "/es" : "*hecho con base en actividad del curso de Alura  "}
+        },{
         name : {
             "/en" : "This Front-End Portfolio",
             "/pt" : "Este Portfólio Front-End",
@@ -89,19 +100,25 @@ export const ProjectList = [
                 "FIGMA prototyping for previous testing the UX;",
                 "Multilanguage Support : English, Portuguese and Spanish);",
                 "Consume of API (My Git-Hub Repository);",
-                "Database search and sort features" ],
+                "Database search and sort features",
+                "Scrolling interactive animations",
+                "Styling: Styled-Components + CSS + G.S.A.P" ],
             
             "/pt" : [
                 "Prototipagem no figma para testar préviamente a UX;",
                 "Suport Mullti-línguas : Inglês, Português e Espanhol",
                 "Consumo de API (Meu repositório Git-Hub);",
-                "Funções de busca e classificar base de dados;"],
+                "Funções de busca e classificar base de dados;",
+                "Animações de Scrolling interativas.",
+                "Estilo: Styled-Components + CSS + G.S.A.P."],
 
             "/es" : [
                 "Prototipo de Figma para probar de antemano la UX;",
                 "Soporte Multi-idioma : Ingles, Portugues y Español;",
                 "Consumo de API (Mi repositorio Git-hub);",
-                "Funciones de búsqueda y clasificar bases de datos;"]
+                "Funciones de búsqueda y clasificar bases de datos;",
+                "Animaciones de scrolling interactivas",
+                "Estilo: Styled-Components + CSS + G.S.A.P"]
         },
         action : {
             "/en" : "More details",
@@ -112,7 +129,12 @@ export const ProjectList = [
         active : true,
         link : "https://ricardomachado.great-site.net",
         repo : "https://github.com/rmachado55/portfolio",
-        key: "portfolio" 
+        key: "portfolio",
+        disclaimer: {
+            "/en" : "",
+            "/pt" : "",
+            "/es" : ""
+        } 
     },    
     {
         name : {
@@ -122,7 +144,7 @@ export const ProjectList = [
         },
         features : {
             "/en" : [
-                "Made in TYPESCRIPT and React.JS;",
+                "Made with TYPESCRIPT and React.JS;",
                 "Allows you to add Tasks and control the completion time of each one;",
                 "Styling: SASS",],
 
@@ -145,6 +167,11 @@ export const ProjectList = [
         active : true,
         link : "https://rmachado55.github.io/controle-de-tempo/",
         repo : "https://github.com/rmachado55/controle-de-tempo",
-        key: "time" 
-    }
+        key: "time",
+        disclaimer : {
+            "/en" : "*Made based on activity from Alura's course",
+            "/pt" : "*Feito com base em atividade de Curso da Alura",
+            "/es" : "*hecho con base en actividad del curso de Alura  "}
+        }
+    
 ]
