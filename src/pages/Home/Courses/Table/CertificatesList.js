@@ -753,4 +753,14 @@ export const CertificatesList =
     "id" : "075",
     "Month": "11"
 },
+{
+    "area": ["MONGO", "EXPRESS", "API"],
+    "hours": "12",
+    "/pt": "NodeJS - API Rest com Express e MongoDB.",
+    "/en": "NodeJS - API Rest with Express and MongoDB.",
+    "/es": "NodeJS - API Rest con Express y MongoDB",
+    "school": "Alura",
+    "id" : "076",
+    "Month": "11"
+},
 ]
