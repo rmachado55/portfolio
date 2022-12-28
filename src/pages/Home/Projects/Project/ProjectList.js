@@ -2,9 +2,9 @@ export const ProjectList = [
 
     {
         name : {
-            "/en" : "Real NGO WebSite + Admin portal + API Rest",
-            "/pt" : "Site real de uma ONG + Portal Admin + API Rest",
-            "/es" : "Sitio web real de una ONG + Portal Admin + API Rest" 
+            "/en" : "Real NGO WebSite + Admin portal (under construction)",
+            "/pt" : "Site real de uma ONG + Portal Admin (em construção)",
+            "/es" : "Sitio web real de una ONG + Portal Admin (en construción)" 
         },
         features : {
             "/en" : [
@@ -33,7 +33,7 @@ export const ProjectList = [
         },
         topics : ["typescript", "api", "MONGO", "nodejs", "express",  "react", "mui", "sass" ],
         active : false,
-        link : "https://www.sercomamor.com.br/",
+        link : "",
         repo: "https://github.com/rmachado55/apiSerComAmor",            
         key: "sercomamor",
         disclaimer: {
