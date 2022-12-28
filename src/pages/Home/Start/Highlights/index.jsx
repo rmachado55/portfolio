@@ -2,8 +2,11 @@ import {Texts} from './Highlights.texts';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components'
 import { Horizontal, Vertical } from "style/_variables";
+import { CertificatesList } from 'pages/Home/Courses/Table/CertificatesList';
 
 export const Highlights = () => {
+
+    const total = CertificatesList.filter(item => item).length
     
     const location = useLocation();
     
@@ -48,7 +51,7 @@ export const Highlights = () => {
 return(
     <Box id={'highlights'}>
         <h3 >{Texts.high01[`${location.pathname}`]}</h3>
-        <h3 >{Texts.high02[`${location.pathname}`]}</h3>
+        <h3 >{total}{Texts.high02[`${location.pathname}`]}</h3>
         <h3 >{Texts.high03[`${location.pathname}`]}</h3>            
     </Box>    
 )

@@ -39,6 +39,7 @@ useEffect(() => {
         </Details>
         <h3>{BadgesList.icons[`${dataRepository.language}`]}</h3>
         <p>{BadgesList.description[`${dataRepository.language}`]}</p>      
+
             
                        
              <a href={dataRepository.html_url}>

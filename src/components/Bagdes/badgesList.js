@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiReactrouter, SiStyledcomponents, SiBootstrap, SiSass, SiTypescript, SiFigma, SiGit, SiGithub, SiNodedotjs, SiExpress, SiMongodb, SiPostman, SiLinux, SiJava } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiReactrouter, SiStyledcomponents, SiBootstrap, SiSass, SiTypescript, SiFigma, SiGit, SiGithub, SiNodedotjs, SiExpress, SiMongodb, SiPostman, SiLinux, SiJava, SiJest, SiMaterialui } from 'react-icons/si';
 import {AiOutlineApi} from 'react-icons/ai';
 import {GiHook} from 'react-icons/gi';
 import {BiBrain, BiCookie} from 'react-icons/bi';
@@ -22,12 +22,13 @@ description : {
     sessionstorage : "Session Storage",
     localstorage : "Local Storage",
     database : "Data Manipulation",
-    api : "API Conection",
+    api : "API-Rest",
     react : "React Framework",
     router : "React Router",
     hooks : "React Hooks",
     styled : "Styled Components",
     boot : "BootStrap Styling",
+    mui : "Material UI Styling",
     sass : "Sass Pre-Processor",
     typescript : "TypeScript Language", 
     TypeScript : "TypeScript Language", 
@@ -39,7 +40,8 @@ description : {
     MONGO : "Mongo DB",
     POST : "Postman",
     LINUX : "Linux",
-    crud : "C.R.U.D."
+    crud : "C.R.U.D.",
+    jest : "Jest Tests"
     },
  icons : {
         java : <SiJava/>,
@@ -61,6 +63,7 @@ description : {
         hooks : <GiHook/>,
         styled: <SiStyledcomponents/>,
         boot : <SiBootstrap/>,
+        mui : <SiMaterialui/>,
         sass : <SiSass/>,
         typescript : <SiTypescript/>,
         TypeScript : <SiTypescript/>,
@@ -73,4 +76,5 @@ description : {
         POST : <SiPostman/>,
         LINUX : <SiLinux/>,
         crud : <GrDatabase/>,
+        jest : <SiJest/>
         }}

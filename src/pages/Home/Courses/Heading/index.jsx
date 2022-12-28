@@ -5,9 +5,6 @@ import { CertificatesList } from '../Table/CertificatesList';
 import {Texts} from './Heading.texts.js'
 
 
-
-
-
 export default function Heading () {
 
     const location = useLocation();

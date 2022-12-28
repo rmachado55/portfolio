@@ -91,7 +91,7 @@ export default function Table ({list, activePage}) {
         
         <Table>
                 <tr>
-                    <th><p></p></th>
+                    
                     <th><p>{Texts.name[`${location.pathname}`]}</p></th>
                     <th><p>{Texts.hours[`${location.pathname}`]}</p></th>
                     <th><p>{Texts.institution[`${location.pathname}`]}</p></th>
@@ -99,8 +99,7 @@ export default function Table ({list, activePage}) {
                     <th><p>{Texts.zoom[`${location.pathname}`]}</p></th>
                 </tr>
             {list.slice(((activePage-1)*10),(activePage*10)).map(certificate =>            
-            <tr>
-                <td><h4>{BadgesList.icons[certificate.area[0]]} {BadgesList.icons[certificate.area[1]]} {BadgesList.icons[certificate.area[2]]}</h4></td>
+            <tr>                
                 <td><p>{certificate[`${location.pathname}`]}</p></td>
                 <td><p>{certificate.hours}</p></td>
                 <td><p>{certificate.school}</p></td>

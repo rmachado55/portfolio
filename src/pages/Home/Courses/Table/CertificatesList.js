@@ -763,4 +763,64 @@ export const CertificatesList =
     "id" : "076",
     "Month": "11"
 },
+{
+    "area": ["typescript"],
+    "hours": "10",
+    "/pt": "TypeScript I - Evoluindo seu JavaScript.",
+    "/en": "TypeScript I - Evolving your javaScript.",
+    "/es": "TypéScript I - Evolucionando su JavaScript",
+    "school": "Alura",
+    "id" : "077",
+    "Month": "11"
+},
+{
+    "area": ["typescript"],
+    "hours": "10",
+    "/pt": "TypeScript II - Avançando na linguagem.",
+    "/en": "TypeScript II - Advancing in language.",
+    "/es": "TypéScript II - Avanzando en el lenguaje",
+    "school": "Alura",
+    "id" : "078",
+    "Month": "11"
+},
+{
+    "area": ["typescript"],
+    "hours": "10",
+    "/pt": "TypeScript III - Mais técnicas e boas práticas.",
+    "/en": "TypeScript III - More tecniques and good practices.",
+    "/es": "TypéScript III - Más técnicas y buenas prácticas.",
+    "school": "Alura",
+    "id" : "079",
+    "Month": "11"
+},
+{
+    "area": ["typescript"],
+    "hours": "8",
+    "/pt": "React - Integrando seu projeto com APIs.",
+    "/en": "React - Integrating your project with APIs.",
+    "/es": "React - Integrando su proyeto con las APIs.",
+    "school": "Alura",
+    "id" : "080",
+    "Month": "11"
+},
+{
+    "area": ["Native"],
+    "hours": "10",
+    "/pt": "React Native - Criando um App.",
+    "/en": "React Native - Creating an App.",
+    "/es": "React Native - Creando un App.",
+    "school": "Alura",
+    "id" : "081",
+    "Month": "12"
+},
+{
+    "area": ["Jest", "react", "typescript"],
+    "hours": "10",
+    "/pt": "React - Testando seus componentes.",
+    "/en": "React - Testing your components.",
+    "/es": "React - Testando su componentes.",
+    "school": "Alura",
+    "id" : "082",
+    "Month": "12"
+},
 ]

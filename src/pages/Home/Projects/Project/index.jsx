@@ -6,8 +6,6 @@ import { BadgesList } from "components/Bagdes/badgesList.js";
 import { Vertical } from "style/_variables.js";
 import {SiGithub} from 'react-icons/si';
 
-
-
 export default function Project () {
 
     const location = useLocation();
@@ -117,7 +115,7 @@ export default function Project () {
             </Title>
             <Project key={ProjectList.key} >
             <Left>
-            <Picture src={`https://rmachado55.github.io/portfolio/assets/img/projects/${ProjectList.key}.png`} alt={ProjectList.link}></Picture>
+            <Picture src={`/assets/img/projects/${ProjectList.key}.png`} alt={ProjectList.link}></Picture>
             <a target="_blank" rel="noreferrer" href={`${ProjectList.repo}`}>
                 <Button active={ProjectList.active}>
                     <h4>{ProjectList.action[`${location.pathname}`]} <SiGithub/></h4>

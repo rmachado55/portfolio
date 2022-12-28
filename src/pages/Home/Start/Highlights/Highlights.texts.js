@@ -2,14 +2,14 @@ export const Texts =
 
 {
     high01 : {
-        "/en" : "Freelancer beggining on development of web applications, from concept design and prototyping, clean code writing, APIs and deployment.",
-        "/pt" : "Freelancer iniciando no desenvolvimento de aplicações web, desde o desenho do conceito e prototipagem, escrita de código limpo, APIs e deploy." ,
-        "/es" : "Freelancer empezando en el desarrollo de aplicaciones web, desde el concepto de diseño y prototipado, escritura de código limpio, APIs y deploy."
+        "/en" : "JavaScript Developer with focus on React. Developed projects using Node.Js, MongoDb, TypeScript and currently also studying React Native (mobile).",
+        "/pt" : "Desenvolvedor JavaScript com foco em React. Projetos desenvolvidos utilizando Node.Js, MongoDb, TypeScript e atualmente também estudando React Native (mobile)." ,
+        "/es" : "Desarrollador JavaScript enfocado en React. Proyectos desarrollados usando Node.Js, MongoDb, TypeScript y actualmente también estudiando React Native (mobile)."
     },
     high02 : {
-        "/en" : "More than 70 courses in Front-End, Back-End, UX and SCRUM. Postgraduating in program analysis and development",
-        "/pt" : "Mais de 70 cursos nas áreas de Front-End, Back-End UX e SCRUM. Cursando pós graduação em Análise e desenvolvimento de programas;",
-        "/es" : "Más de 70 cursos en las áreas de Front-End, Back-End, UX y SCRUM. Cursando un posgrado en análisis y desarrollo de programas",
+        "/en" : " certificates in Front-End, Back-End, UX and SCRUM. Postgraduating in program analysis and development",
+        "/pt" : " certificados nas áreas de Front-End, Back-End UX e SCRUM. Cursando pós graduação em Análise e desenvolvimento de programas;",
+        "/es" : " certificaciones en las áreas de Front-End, Back-End, UX y SCRUM. Cursando un posgrado en análisis y desarrollo de programas",
     },
     high03 : {
         "/en" : "Professional in career transition, with previous experience in Product Marketing and Trade Marketing;",
